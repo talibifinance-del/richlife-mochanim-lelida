@@ -117,12 +117,12 @@ section{padding:70px 0}
 .sh-head{padding:18px 26px;font-weight:800;font-size:15px}
 .sh-head.out{background:#f1f4f1;color:var(--ink-soft);border-inline-start:1px solid var(--line)}
 .sh-head.in{background:linear-gradient(135deg,var(--sage),var(--sage-2));color:var(--pine-darker)}
-.sh-cell{padding:20px 26px 20px 46px;border-top:1px solid var(--line);font-size:16px;line-height:1.5;position:relative}
+.sh-cell{padding:22px 46px 22px 24px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.6;position:relative}
 .sh-cell.out{color:var(--ink-soft);border-inline-start:1px solid var(--line)}
-.sh-cell.out::before{content:'−';position:absolute;right:16px;top:20px;color:#b9c6bf;font-weight:800}
+.sh-cell.out::before{content:'−';position:absolute;right:20px;top:23px;color:#b9c6bf;font-weight:800;font-size:17px}
 .sh-cell.in{color:var(--ink);font-weight:600}
-.sh-cell.in::before{content:'✓';position:absolute;right:16px;top:20px;color:var(--pine);font-weight:800}
-@media(max-width:640px){.shifts{grid-template-columns:1fr}.sh-head.out,.sh-cell.out{display:none}.sh-cell{padding-left:26px}}
+.sh-cell.in::before{content:'✓';position:absolute;right:19px;top:23px;color:var(--pine);font-weight:800;font-size:16px}
+@media(max-width:640px){.shifts{grid-template-columns:1fr}.sh-head.out,.sh-cell.out{display:none}.sh-cell{padding:20px 44px 20px 20px}}
 
 .valuebox{max-width:760px;margin:0 auto;background:linear-gradient(135deg,var(--pine-deep),var(--pine-darker));
   color:#fff;border-radius:24px;padding:40px 30px;text-align:center;box-shadow:var(--shadow)}
@@ -232,6 +232,30 @@ section{padding:70px 0}
 .fw-col li{font-size:15.5px;color:var(--ink);line-height:1.5;padding-inline-start:27px;position:relative}
 .fw-col.yes li::before{content:'✓';position:absolute;right:0;top:-1px;color:var(--pine);font-weight:900;font-size:16px}
 .fw-col.no li::before{content:'✕';position:absolute;right:0;top:-1px;color:#c99a5f;font-weight:900;font-size:16px}
+/* desired state */
+.desired{background:linear-gradient(180deg,#eef4ef,#e5efe7)}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:840px;margin:0 auto}
+@media(max-width:600px){.dgrid{grid-template-columns:1fr}}
+.dcard{display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow-sm)}
+.dcard .dic{flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--sage),var(--sage-2));display:flex;align-items:center;justify-content:center;font-size:24px}
+.dcard p{font-size:16px;color:var(--ink);line-height:1.6;padding-top:2px}
+.dcard p b{color:var(--pine-darker)}
+/* vertical journey */
+.journey{max-width:720px;margin:46px auto 0;position:relative}
+.journey::before{content:'';position:absolute;top:14px;bottom:14px;right:27px;width:2px;background:var(--sage)}
+.jstep{position:relative;padding:0 74px 30px 0}
+.jstep:last-child{padding-bottom:0}
+.jdot{position:absolute;right:0;top:0;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--sage-2));border:3px solid #fff;box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;font-size:25px;z-index:1;transition:filter .5s,transform .5s}
+.jcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-sm)}
+.jphase{font-size:12px;font-weight:800;letter-spacing:.07em;color:var(--pine);margin-bottom:5px}
+.jcard h3{font-size:18.5px;color:var(--pine-darker);margin-bottom:11px;line-height:1.3}
+.jcard ul{list-style:none;display:grid;gap:8px}
+.jcard li{font-size:15px;color:var(--ink-soft);line-height:1.55;padding-inline-start:18px;position:relative}
+.jcard li::before{content:'';position:absolute;right:3px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--sage)}
+.jcard li b{color:var(--pine-deep)}
+.jstep.reveal .jdot{filter:grayscale(.7);transform:scale(.82)}
+.jstep.reveal.in .jdot{filter:none;transform:none}
+@media(max-width:560px){.jstep{padding-right:62px;padding-bottom:26px}.jdot{width:48px;height:48px;font-size:22px}.journey::before{right:23px}.jcard{padding:18px}}
 
 body.anim .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,.68,0,1),transform .6s cubic-bezier(.22,.68,0,1)}
 body.anim .reveal.in{opacity:1;transform:none}
@@ -263,14 +287,8 @@ body.anim .reveal.in{opacity:1;transform:none}
   <span class="kicker"><span class="dot"></span>לזוגות ולנשים שחושבים על תינוק</span>
   <h1>מוכנים <span class="accent">כלכלית</span> ללידה</h1>
   <p class="sub">התוכנית שתעזור לכם להגיע מוכנים להרחבת המשפחה, לתכנן חופשת לידה של <b>יותר מ-3 חודשים</b>, ולבנות יציבות כלכלית עוד לפני שהתינוק מגיע.</p>
-  <div class="chips reveal">
-   <span class="chip-x"><span class="x">✕</span>בלי להבין בכסף</span>
-   <span class="chip-x"><span class="x">✕</span>בלי אקסלים מסובכים</span>
-   <span class="chip-x"><span class="x">✕</span>בלי לספור ימים לחזרה לעבודה</span>
-   <span class="chip-x"><span class="x">✓</span>מתאים גם לפני היריון</span>
-  </div>
   <div class="cta-row">
-   <a href="#buy" class="btn btn-lg">אני רוצה את הקורס · 147 ₪</a>
+   <a href="#buy" class="btn btn-lg">אני רוצה את הקורס</a>
    <a href="#stages" class="btn btn-ghost btn-lg">מה יש בפנים ↓</a>
   </div>
   <p class="note">כי כל אמא ואבא צריכים להיכנס להורות מתוך שקט, לא מתוך לחץ כלכלי.</p>
@@ -289,91 +307,81 @@ body.anim .reveal.in{opacity:1;transform:none}
  <div class="ph-s">צילומי ההיריון ייכנסו לכאן</div>
 </div>
 
-<!-- PREFACE -->
-<section class="preface">
- <div class="narrow">
-  <p class="pf reveal">ילד זה דבר מדהים ומשמח. ובמקביל, זו התחייבות של שנים, והוצאה שמגיעה ל<b>מעל מיליון שקל עד גיל 18</b>.</p>
-  <p class="pf reveal">סורי, אבל אתם יודעים ש<b>אהבה לא תחליף מטרנה או גן ילדים תקין</b>.</p>
-  <p class="pf reveal">רוב ההורים מגלים שהם לא באמת מוכנים כלכלית, ומגלים את זה תוך כדי. ואז מתחיל הלחץ סביב הכסף, עד שמגיע הרגע שהילד מבקש משהו, או שאתם רוצים להשקיע בו, ואתם מסתכלים על חשבון הבנק ומבינים <b>שאין מאיפה</b>.</p>
-  <p class="pf reveal">אפשר להיות ההורה הכי אוהב בעולם, אבל כשאין יציבות כלכלית וכל חודש נגמר בלחץ, כל הבית מרגיש את זה.</p>
-  <div class="pf-punch reveal">אז כמה אתם מוכנים כלכלית כדי להביא ילד?</div>
- </div>
-</section>
-
-<!-- STORY -->
-<section class="story">
+<!-- CURRENT STATE (מצב מצוי) -->
+<section class="story" id="matzuy">
  <div class="narrow">
   <div class="eyebrow reveal">// הרגע שאתם בו</div>
-  <h2 class="h2 reveal" style="margin-bottom:36px">אתם ברגע המרגש הזה, וכבר מתחילות <span class="accent">לצוץ השאלות</span></h2>
-  <p class="reveal">החלטתם להרחיב את המשפחה, או שאולי כבר גיליתם שהמסע התחיל. ולצד ההתרגשות והחלומות, מתחילה לצוץ שאלה קטנה שקשה להגיד בקול: <b>"האם אנחנו באמת מוכנים לזה כלכלית?"</b></p>
+  <h2 class="h2 reveal" style="margin-bottom:34px">אתם ברגע המרגש הזה, וכבר מתחילות <span class="accent">לצוץ השאלות</span></h2>
+  <p class="reveal">ילד זה דבר מדהים ומשמח. ובמקביל, זו התחייבות של שנים, והוצאה שמגיעה ל<b>מעל <span class="cu" data-to="1000000">0</span> שקל עד גיל 18</b>. וסורי, אבל אתם יודעים ש<b>אהבה לא תחליף מטרנה או גן ילדים תקין</b>.</p>
+  <p class="reveal">החלטתם להרחיב את המשפחה, או שאולי כבר גיליתם שהמסע התחיל. ולצד ההתרגשות והחלומות, מתחילה לצוץ שאלה שקשה להגיד בקול: <b>"האם אנחנו באמת מוכנים לזה כלכלית?"</b></p>
   <p class="reveal">ומחשבה נוספת שרצה בעיקר בראש של האישה: <em>"איך אני אשלח את התינוקת שלי אחרי 3 חודשים למעון? היא צריכה את אמא שלה."</em></p>
   <div class="pull reveal">אבל המדינה נותנת רק <span class="hl">15 שבועות בתשלום</span>, ובתוך תוככם אתם כבר מרגישים שזה פשוט לא מספיק.</div>
-  <p class="reveal">אתם לא רוצים לספור את הימים לאחור ולהרגיש שהשעון מתקתק לעבר החזרה לעבודה, רק בגלל שהכסף נגמר. אתם רואים סביבכם זוגות שמעצבים חדר יוקרתי לתינוק וקונים הכל חדש מהניילון, ולא נראה שהמחיר מטריד אותם. ומצד שני, חברים אחרים שמתלוננים בלי סוף שחופשת הלידה לא מספיקה ושהם בקושי סוגרים את החודש.</p>
+  <p class="reveal">רוב ההורים מגלים שהם לא באמת מוכנים כלכלית, ומגלים את זה תוך כדי. ואז מתחיל הלחץ סביב הכסף, עד שמגיע הרגע שהילד מבקש משהו, או שאתם רוצים להשקיע בו, ואתם מסתכלים על חשבון הבנק ומבינים <b>שאין מאיפה</b>.</p>
+  <p class="reveal">אתם רואים סביבכם זוגות שמעצבים חדר יוקרתי לתינוק וקונים הכל חדש מהניילון, ולא נראה שהמחיר מטריד אותם. ומצד שני, חברים שמתלוננים בלי סוף שחופשת הלידה לא מספיקה ושהם בקושי סוגרים את החודש.</p>
   <div class="pull reveal">ואז יש את <span class="hl">החברה ההיא</span>. זאת שיכולה להרשות לעצמה להישאר שנה שלמה בבית עם התינוק, ברוגע, בלי חרדה כלכלית לרגע.</div>
   <p class="reveal">ואתם מסתכלים עליה ולא מבינים, איך היא עושה את זה? הרי היא לא מרוויחה הרבה יותר מכם, אתם מרוויחים פחות או יותר אותו דבר.</p>
-  <div class="quote reveal">
-   <div class="t">"ואתם רוצים גם להיות מוכנים כלכלית להרחיב את המשפחה. אבל איך עושים את זה?"</div>
-   <div class="a">בדיוק בשביל זה נבנה הקורס</div>
-  </div>
  </div>
 </section>
 
-<!-- TIMELINE -->
-<section>
+<!-- DESIRED STATE (מצב רצוי) -->
+<section class="desired" id="ratzuy">
  <div class="wrap">
-  <div class="eyebrow reveal">// המסע</div>
-  <h2 class="h2 reveal">הקורס מלווה אתכם <span class="accent">בכל שלב</span></h2>
-  <p class="intro reveal">מהרגע שחושבים על תינוק ועד השנה הראשונה, בכל נקודה יש מה לעשות נכון.</p>
-  <div class="timeline">
-   <div class="tl-step reveal"><div class="tl-dot">💭</div><div><h3>לפני היריון</h3><p>שפה זוגית סביב כסף, ביטוחים ורציפות זכויות, עוד כשה"חלון" פתוח.</p></div></div>
-   <div class="tl-step reveal"><div class="tl-dot">🤰</div><div><h3>בהיריון</h3><p>מיצוי הסל וההחזרים, ותכנון תקציב הלידה והקניות.</p></div></div>
-   <div class="tl-step reveal"><div class="tl-dot">👶</div><div><h3>הלידה והחופשה</h3><p>קרן חופשת לידה שמאפשרת להישאר בבית כמה שרוצים, בלי לחץ.</p></div></div>
-   <div class="tl-step reveal"><div class="tl-dot">🌱</div><div><h3>השנה הראשונה</h3><p>הגנה על המשפחה ובניית הון לתינוק/ת מהיום הראשון.</p></div></div>
+  <div class="eyebrow reveal">// איך זה יכול להיראות</div>
+  <h2 class="h2 reveal">עכשיו דמיינו את אותו רגע, <span class="accent">אחרת</span></h2>
+  <p class="intro reveal">בדיוק אותה נקודה בחיים, אבל מתוך שקט וידיעה במקום חרדה. ככה זה מרגיש כשמגיעים מוכנים.</p>
+  <div class="dgrid">
+   <div class="dcard reveal"><div class="dic">🏡</div><p>להישאר בבית עם התינוק/ת <b>כמה שבא לכם</b>, בלי לספור ימים לחזרה לעבודה.</p></div>
+   <div class="dcard reveal"><div class="dic">💸</div><p>לדעת שכל זכות וכל החזר <b>ממומשים עד השקל האחרון</b>, ישר לחשבון הבנק.</p></div>
+   <div class="dcard reveal"><div class="dic">🤝</div><p>להיות באותו ראש כזוג, עם <b>שפה משותפת ותוכנית</b>, בלי מריבות על כסף.</p></div>
+   <div class="dcard reveal"><div class="dic">🌱</div><p>לתת לתינוק/ת <b>נקודת פתיחה כלכלית אמיתית</b>, כבר מהיום הראשון.</p></div>
   </div>
+  <p class="intro reveal" style="margin:36px auto 0">זה ההבדל בין "נראה לי שיהיה בסדר" ל<b>"אני יודעת שיהיה בסדר"</b>. וזה בדיוק מה שהקורס עושה.</p>
  </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- JOURNEY (מסע אנכי) -->
 <section id="stages">
  <div class="wrap">
-  <div class="eyebrow reveal">// איך זה עובד</div>
-  <h2 class="h2 reveal">חמישה שלבים, מהתכנון <span class="accent">ועד הצמיחה</span></h2>
-  <p class="intro reveal">בנוי בדיוק לפי סדר הזמנים של החיים, כך שבכל שלב אתם יודעים מה לעשות עכשיו.</p>
-  <div class="stages">
-   <div class="stage reveal"><div class="num">1</div><div class="ic">💬</div><h3>מתחילים מהבסיס, שפה זוגית סביב כסף</h3>
-    <ul>
-     <li><b>עקרונות לשיחה זוגית:</b> איך נכון להעלות את הנושא הכלכלי בלי שזה יהיה מביך או טעון, ואיך בכלל מתחילים שיחה על כסף בלי שזה ירגיש כבד או מלחיץ, עם דוגמאות וסיטואציות לדבר בגובה העיניים.</li>
-     <li><b>המבנה הכלכלי שלכם:</b> נבדוק אם הדרך שבה אתם מנהלים את החשבון היום עדיין מתאימה למה שמחכה לכם כמשפחה.</li>
-     <li><b>מיפוי הכנסות והוצאות ראשוני:</b> מבינים מה קורה במשק הבית עוד לפני שהוצאות הבייבי מצטרפות.</li>
-    </ul>
-   </div>
-   <div class="stage reveal"><div class="num">2</div><div class="ic">⏳</div><h3>הפעולות הקריטיות לפני הכניסה להיריון</h3>
-    <ul>
-     <li>כאן חוסכים אלפי שקלים פשוט כי פועלים בזמן. יש דברים שחייבים לסדר עכשיו, כי עוד רגע ה"חלון" נסגר והזכויות שלכם ייפגעו.</li>
-     <li><b>ביטוחים:</b> איך לוודא שאתם מכוסים להחזרים המקסימליים על הבדיקות היקרות.</li>
-     <li><b>בדיקת שכר וזכויות:</b> מה צריך לבדוק לגבי רציפות הזכויות שלכם כדי להבטיח את דמי הלידה המקסימליים.</li>
-    </ul>
-   </div>
-   <div class="stage reveal"><div class="num">3</div><div class="ic">📊</div><h3>בונים תוכנית כלכלית ללידה ולחופשה</h3>
-    <ul>
-     <li>נערכים לשינוי האמיתי בתזרים, ובונים את התשתית שתאפשר לכם את השקט להישאר בבית כמה שתרצו.</li>
-     <li><b>כמה באמת עולה ילד?</b> הבנה של עלויות ההיריון, הלידה והשנה הראשונה, ומה חשוב לקנות ומה סתם מיותר.</li>
-     <li><b>תכנון חופשת לידה:</b> כמה צריך לחסוך כדי להיות רגועים כלכלית לתקופת הלידה.</li>
-    </ul>
-   </div>
-   <div class="stage reveal"><div class="num">4</div><div class="ic">🧾</div><h3>בתוך התהליך, מה עושים בזמן ההיריון</h3>
-    <ul>
-     <li>המסע כבר התחיל (טרימסטר 1-2), ועכשיו המטרה למקסם כל שקל שמגיע לכם מהמערכת.</li>
-     <li><b>מיצוי ה"סל":</b> איך לנצל נכון את כל ההחזרים המגיעים לכם על בדיקות וייעוצים, כך שחשבון הבנק שלכם לא ייפגע.</li>
-    </ul>
-   </div>
-   <div class="stage reveal"><div class="num">5</div><div class="ic">🌱</div><h3>צמיחה כלכלית לתינוק/ת</h3>
-    <ul>
-     <li>התינוק/ת כאן, ועוברים למצב של הגנה ובניית עתיד. איך מגנים עליהם בריאותית וכלכלית?</li>
-     <li>מה עושים עם <b>החיסכון לכל ילד</b> שמקבלים מהמדינה?</li>
-     <li>ואיך מייצרים להם הון בגיל 20 מהשקעה מינימלית?</li>
-    </ul>
-   </div>
+  <div class="eyebrow reveal">// המסע שנעשה יחד</div>
+  <h2 class="h2 reveal">אני מלווה אתכם <span class="accent">בכל שלב</span></h2>
+  <p class="intro reveal">מהרגע שחושבים על תינוק ועד השנה הראשונה, בכל תחנה יש בדיוק מה לעשות. ככה זה נראה, שלב אחרי שלב.</p>
+  <div class="journey">
+   <div class="jstep reveal"><div class="jdot">💬</div><div class="jcard">
+     <div class="jphase">לפני הכל</div><h3>שפה זוגית סביב כסף</h3>
+     <ul>
+      <li>איך לפתוח שיחה על כסף בלי שזה יהיה מביך או טעון, עם דוגמאות אמיתיות בגובה העיניים.</li>
+      <li>בודקים אם המבנה הכלכלי שלכם עדיין מתאים למה שמחכה לכם כמשפחה.</li>
+      <li><b>מיפוי הכנסות והוצאות</b> ראשוני, עוד לפני שהוצאות הבייבי מצטרפות.</li>
+     </ul>
+   </div></div>
+   <div class="jstep reveal"><div class="jdot">⏳</div><div class="jcard">
+     <div class="jphase">לפני היריון</div><h3>הפעולות הקריטיות שחוסכות אלפי שקלים</h3>
+     <ul>
+      <li>יש דברים שאפשר לעשות רק עכשיו, כי עוד רגע ה"חלון" נסגר והזכויות ייפגעו.</li>
+      <li><b>ביטוחים:</b> לוודא שאתם מכוסים להחזרים המקסימליים על הבדיקות היקרות.</li>
+      <li><b>בדיקת שכר וזכויות:</b> רציפות שמבטיחה את דמי הלידה המקסימליים.</li>
+     </ul>
+   </div></div>
+   <div class="jstep reveal"><div class="jdot">📊</div><div class="jcard">
+     <div class="jphase">לקראת הלידה</div><h3>תוכנית כלכלית וקרן חופשת לידה</h3>
+     <ul>
+      <li><b>כמה באמת עולה ילד?</b> עלויות ההיריון, הלידה והשנה הראשונה, ומה חשוב לקנות ומה מיותר.</li>
+      <li><b>קרן חופשת לידה:</b> בדיוק כמה לחסוך כדי להישאר בבית כמה שבא לכם, בראש שקט.</li>
+     </ul>
+   </div></div>
+   <div class="jstep reveal"><div class="jdot">🧾</div><div class="jcard">
+     <div class="jphase">בתוך ההיריון</div><h3>ממצים כל שקל מהמערכת</h3>
+     <ul>
+      <li><b>מיצוי ה"סל":</b> לנצל כל החזר שמגיע לכם על בדיקות וייעוצים, כך שחשבון הבנק לא ייפגע.</li>
+     </ul>
+   </div></div>
+   <div class="jstep reveal"><div class="jdot">🌱</div><div class="jcard">
+     <div class="jphase">השנה הראשונה</div><h3>צמיחה כלכלית לתינוק/ת</h3>
+     <ul>
+      <li>מגנים על המשפחה בריאותית וכלכלית.</li>
+      <li>מה עושים עם <b>החיסכון לכל ילד</b>, ואיך מייצרים הון לגיל 20 מהשקעה מינימלית.</li>
+     </ul>
+   </div></div>
   </div>
  </div>
 </section>
@@ -411,7 +419,7 @@ body.anim .reveal.in{opacity:1;transform:none}
   <div class="forwho">
    <div class="fw-col yes reveal"><h3>✅ זה בול בשבילכם אם</h3>
     <ul>
-     <li>אתם לפני היריון או בתחילתו, ורוצים להגיע מוכנים ורגועים.</li>
+     <li>אתם לפני היריון, ורוצים להגיע מוכנים ורגועים.</li>
      <li>אתם רוצים חופשת לידה ארוכה מ-3 חודשים, בלי חרדה כלכלית.</li>
      <li>לא בא לכם לפספס אף זכות, הטבה או החזר שמגיע לכם.</li>
      <li>אתם רוצים לבנות לתינוק/ת עתיד כלכלי כבר מהיום הראשון.</li>
@@ -553,14 +561,14 @@ body.anim .reveal.in{opacity:1;transform:none}
  <div class="wrap">
   <h2 class="h2 reveal">להביא ילד לעולם מתוך <span class="accent">שקט, לא מתוך לחץ</span></h2>
   <p class="intro reveal">כל חודש שמתחילים בו מראש עובד לטובתכם, ולטובת התינוק/ת. בואו נעשה את זה נכון.</p>
-  <div style="text-align:center"><a href="#buy" class="btn btn-lg">אני רוצה את הקורס · 147 ₪</a></div>
+  <div style="text-align:center"><a href="#buy" class="btn btn-lg">אני רוצה את הקורס</a></div>
  </div>
 </section>
 
 <div class="footer"><span class="dot"></span> RichLife · טלי בנימינוב · יעוץ פיננסי לחיים מאושרים ומעושרים</div>
 
 <div class="stickycta" id="stickycta">
- <div class="sc-p">מוכנים כלכלית ללידה · <span class="sc-price">מחיר השקה 147 ₪</span></div>
+ <div class="sc-p">מוכנים כלכלית ללידה 🤍</div>
  <a href="#buy">להצטרפות</a>
 </div>
 
