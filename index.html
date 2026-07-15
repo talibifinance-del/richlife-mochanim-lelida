@@ -6,6 +6,12 @@
 <meta name="theme-color" content="#eef4ef">
 <title>מוכנים כלכלית ללידה · RichLife</title>
 <meta name="description" content="הקורס שיעזור לכם להגיע מוכנים כלכלית ללידה: לתכנן חופשת לידה של יותר מ-3 חודשים, למצות כל זכות, ולבנות עתיד כלכלי לתינוק. מאת טלי בנימינוב, RichLife.">
+<!-- Meta Pixel (RichLife) — ID לאישור טלי -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','208911198828875');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=208911198828875&ev=PageView&noscript=1"/></noscript>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -206,6 +212,26 @@ section{padding:70px 0}
 .stickycta .sc-p .sc-price{color:var(--pine)}
 .stickycta a{background:var(--pine-deep);color:#fff;text-decoration:none;font-weight:800;font-size:14.5px;padding:11px 24px;border-radius:100px;white-space:nowrap}
 @media(min-width:721px){.stickycta.show{display:none}}
+/* timeline */
+.timeline{position:relative;max-width:920px;margin:44px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.timeline::before{content:'';position:absolute;top:27px;right:8%;left:8%;height:2px;background:var(--sage);z-index:0}
+.tl-step{position:relative;z-index:1;text-align:center}
+.tl-dot{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--sage-2));border:3px solid #fff;box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px}
+.tl-step h3{font-size:16.5px;color:var(--pine-darker);margin-bottom:6px}
+.tl-step p{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+@media(max-width:640px){.timeline{grid-template-columns:1fr;gap:0;max-width:440px}.timeline::before{right:27px;left:auto;top:10px;bottom:10px;width:2px;height:auto}
+ .tl-step{text-align:right;display:flex;gap:16px;padding-bottom:24px}.tl-dot{margin:0;flex:0 0 auto}.tl-step>div{flex:1;padding-top:6px}}
+/* for who */
+.forwho{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:44px auto 0}
+@media(max-width:640px){.forwho{grid-template-columns:1fr}}
+.fw-col{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;box-shadow:var(--shadow-sm)}
+.fw-col.yes{border-top:4px solid var(--pine)}
+.fw-col.no{border-top:4px solid #d9b48a}
+.fw-col h3{font-size:19px;color:var(--pine-darker);margin-bottom:16px}
+.fw-col ul{list-style:none;display:grid;gap:12px}
+.fw-col li{font-size:15.5px;color:var(--ink);line-height:1.5;padding-inline-start:27px;position:relative}
+.fw-col.yes li::before{content:'✓';position:absolute;right:0;top:-1px;color:var(--pine);font-weight:900;font-size:16px}
+.fw-col.no li::before{content:'✕';position:absolute;right:0;top:-1px;color:#c99a5f;font-weight:900;font-size:16px}
 
 body.anim .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,.68,0,1),transform .6s cubic-bezier(.22,.68,0,1)}
 body.anim .reveal.in{opacity:1;transform:none}
@@ -292,6 +318,21 @@ body.anim .reveal.in{opacity:1;transform:none}
  </div>
 </section>
 
+<!-- TIMELINE -->
+<section>
+ <div class="wrap">
+  <div class="eyebrow reveal">// המסע</div>
+  <h2 class="h2 reveal">הקורס מלווה אתכם <span class="accent">בכל שלב</span></h2>
+  <p class="intro reveal">מהרגע שחושבים על תינוק ועד השנה הראשונה, בכל נקודה יש מה לעשות נכון.</p>
+  <div class="timeline">
+   <div class="tl-step reveal"><div class="tl-dot">💭</div><div><h3>לפני היריון</h3><p>שפה זוגית סביב כסף, ביטוחים ורציפות זכויות, עוד כשה"חלון" פתוח.</p></div></div>
+   <div class="tl-step reveal"><div class="tl-dot">🤰</div><div><h3>בהיריון</h3><p>מיצוי הסל וההחזרים, ותכנון תקציב הלידה והקניות.</p></div></div>
+   <div class="tl-step reveal"><div class="tl-dot">👶</div><div><h3>הלידה והחופשה</h3><p>קרן חופשת לידה שמאפשרת להישאר בבית כמה שרוצים, בלי לחץ.</p></div></div>
+   <div class="tl-step reveal"><div class="tl-dot">🌱</div><div><h3>השנה הראשונה</h3><p>הגנה על המשפחה ובניית הון לתינוק/ת מהיום הראשון.</p></div></div>
+  </div>
+ </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section id="stages">
  <div class="wrap">
@@ -362,6 +403,32 @@ body.anim .reveal.in{opacity:1;transform:none}
  </div>
 </section>
 
+<!-- FOR WHO -->
+<section class="inside">
+ <div class="wrap">
+  <div class="eyebrow reveal">// למי זה מתאים</div>
+  <h2 class="h2 reveal">בדקו אם זה <span class="accent">בשבילכם</span></h2>
+  <div class="forwho">
+   <div class="fw-col yes reveal"><h3>✅ זה בול בשבילכם אם</h3>
+    <ul>
+     <li>אתם לפני היריון או בתחילתו, ורוצים להגיע מוכנים ורגועים.</li>
+     <li>אתם רוצים חופשת לידה ארוכה מ-3 חודשים, בלי חרדה כלכלית.</li>
+     <li>לא בא לכם לפספס אף זכות, הטבה או החזר שמגיע לכם.</li>
+     <li>אתם רוצים לבנות לתינוק/ת עתיד כלכלי כבר מהיום הראשון.</li>
+     <li>אתם מוכנים להשקיע קצת למידה כדי לחסוך אלפי שקלים.</li>
+    </ul>
+   </div>
+   <div class="fw-col no reveal"><h3>🚫 כנראה פחות בשבילכם אם</h3>
+    <ul>
+     <li>אתם מחפשים דרך "להתעשר מהר", זה לא זה.</li>
+     <li>כבר עשיתם את כל ההיערכות הכלכלית וזה מסודר לגמרי.</li>
+     <li>אתם לא מוכנים בכלל להסתכל על המספרים של משק הבית.</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
 <!-- TRANSFORMATION -->
 <section>
  <div class="wrap">
@@ -392,6 +459,27 @@ body.anim .reveal.in{opacity:1;transform:none}
    <p>וכשהתינוק/ת נולד/ת, עם השקעה חכמה ומינימלית</p>
    <div class="big"><span class="cu" data-to="100000">0</span> - <span class="cu" data-to="200000">0</span> ₪</div>
    <p>שישתחררו איתו/ה מהצבא. במקום להשקיע רק בעגלה, אתם משקיעים בתשתית שמלווה אותם לכל החיים.</p>
+  </div>
+ </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+ <div class="wrap">
+  <div class="eyebrow reveal">// למה קורס</div>
+  <h2 class="h2 reveal">לבד זה יקר יותר <span class="accent">ממה שנדמה</span></h2>
+  <p class="intro reveal">אפשר לנסות להסתדר לבד, אבל הנה מה שזה בדרך כלל עולה, מול מה שהקורס נותן.</p>
+  <div class="shifts reveal">
+   <div class="sh-head out">לבד</div>
+   <div class="sh-head in">עם הקורס</div>
+   <div class="sh-cell out">שעות של חיפוש בגוגל ובקבוצות, בלי לדעת למי להאמין</div>
+   <div class="sh-cell in">כל הידע מרוכז ומסודר, שלב-אחר-שלב, במקום אחד</div>
+   <div class="sh-cell out">טעויות יקרות בביטוחים ובתזמון שאי אפשר לתקן בדיעבד</div>
+   <div class="sh-cell in">יודעים בדיוק מה לעשות ומתי, עוד כשה"חלון" פתוח</div>
+   <div class="sh-cell out">לפספס זכויות והחזרים ששווים אלפי שקלים</div>
+   <div class="sh-cell in">מחשבונים וצ'ק-ליסט שמוודאים שכל שקל ממומש</div>
+   <div class="sh-cell out">לנחש כמה צריך לחסוך, ולהתפלל שיספיק</div>
+   <div class="sh-cell in">מספר מדויק לקרן חופשת הלידה, מותאם אליכם</div>
   </div>
  </div>
 </section>
