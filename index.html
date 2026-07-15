@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#eef4ef">
+<title>מוכנים כלכלית ללידה · RichLife</title>
+<meta name="description" content="הקורס שיעזור לכם להגיע מוכנים כלכלית ללידה: לתכנן חופשת לידה של יותר מ-3 חודשים, למצות כל זכות, ולבנות עתיד כלכלי לתינוק. מאת טלי בנימינוב, RichLife.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#1e2b25; --ink-soft:#51625a; --line:#d3e0df;
+  --pine:#5f7d6a; --pine-deep:#3e5448; --pine-darker:#2f4036;
+  --sage:#bcd3bf; --sage-2:#d4e2d7; --paper:#e9f1f2; --sage-tint:#eef4ef; --white:#fff;
+  --shadow:0 18px 50px rgba(62,84,72,.14); --shadow-sm:0 8px 24px rgba(62,84,72,.09);
+  --font:'Heebo',system-ui,Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--sage-tint);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;direction:rtl}
+h1,h2,h3{line-height:1.18;margin:0;font-weight:800}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:820px;margin:0 auto;padding:0 22px}
+
+#progress{position:fixed;top:0;right:0;height:3px;width:0;z-index:999;background:linear-gradient(90deg,var(--pine-deep),var(--sage));pointer-events:none;transition:width .05s linear}
+
+.btn{display:inline-block;border:none;cursor:pointer;text-decoration:none;font-family:inherit;font-weight:800;
+  background:var(--pine-deep);color:#fff;font-size:18px;padding:17px 42px;border-radius:100px;box-shadow:var(--shadow-sm);transition:.18s}
+.btn:hover{background:var(--pine-darker);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-lg{font-size:19px;padding:19px 48px}
+.btn-ghost{background:transparent;color:var(--pine-deep);border:1.5px solid var(--line);box-shadow:none}
+.btn-ghost:hover{background:#fff;border-color:var(--pine);transform:none}
+
+nav{position:sticky;top:0;z-index:90;background:rgba(238,244,239,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--pine-darker);font-size:19px;letter-spacing:.02em}
+.nav-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--pine)}
+.nav-brand span.sub{font-weight:400;font-size:13px;color:var(--ink-soft);border-inline-start:1px solid var(--line);padding-inline-start:10px}
+.nav-cta{background:var(--pine-deep);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 22px;border-radius:100px;transition:.18s}
+.nav-cta:hover{background:var(--pine-darker)}
+@media(max-width:620px){.nav-brand span.sub{display:none}}
+
+.hero{position:relative;overflow:hidden;text-align:center;padding:96px 22px 84px;background:
+  radial-gradient(circle at 14% 18%,rgba(188,211,191,.6),transparent 42%),
+  radial-gradient(circle at 86% 12%,rgba(212,226,215,.6),transparent 46%),
+  radial-gradient(circle at 50% 100%,rgba(233,241,242,.7),transparent 55%),
+  linear-gradient(180deg,#f3f7f3,#e9f1f2)}
+.kicker{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);color:var(--pine);
+  font-weight:700;font-size:14px;padding:8px 18px;border-radius:100px;margin-bottom:26px;box-shadow:var(--shadow-sm)}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--pine);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:900;color:var(--pine-darker);letter-spacing:-.01em;margin-bottom:20px}
+.hero h1 .accent{color:var(--pine)}
+.hero .sub{font-size:clamp(18px,2.3vw,22px);color:var(--ink-soft);max-width:680px;margin:0 auto 34px;line-height:1.7}
+.hero .sub b{color:var(--pine-deep)}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .note{margin-top:24px;font-size:15px;color:var(--ink-soft)}
+
+section{padding:70px 0}
+.eyebrow{font-size:13px;letter-spacing:.14em;font-weight:700;color:var(--pine);margin-bottom:14px;text-align:center}
+.h2{font-size:clamp(28px,4vw,44px);font-weight:900;color:var(--pine-darker);text-align:center;letter-spacing:-.01em;margin-bottom:16px}
+.h2 .accent{color:var(--pine)}
+.intro{font-size:clamp(16px,1.9vw,20px);color:var(--ink-soft);text-align:center;max-width:700px;margin:0 auto 46px;line-height:1.75}
+.intro b{color:var(--ink)}
+
+.story{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story .narrow{padding-top:70px;padding-bottom:70px}
+.story p{font-size:clamp(17px,2vw,20px);color:var(--ink);line-height:1.85;margin-bottom:22px}
+.story p b{color:var(--pine-darker)}
+.story p em{font-style:normal;color:var(--pine-deep);font-weight:700}
+.story .pull{font-size:clamp(20px,2.9vw,28px);font-weight:800;color:var(--pine-darker);line-height:1.42;
+  margin:34px 0;padding:22px 26px;background:linear-gradient(135deg,var(--sage-tint),#fff);
+  border:1px solid var(--sage);border-inline-start:6px solid var(--pine);border-radius:16px}
+.story .pull .hl{color:var(--pine-deep)}
+.quote{margin-top:34px;padding:30px 32px;background:linear-gradient(135deg,var(--sage-tint),#fff);
+  border:1px solid var(--line);border-inline-start:5px solid var(--pine);border-radius:18px}
+.quote .t{font-size:clamp(19px,2.3vw,25px);font-weight:800;color:var(--pine-darker);font-style:italic;line-height:1.5;margin-bottom:12px}
+.quote .a{font-size:14px;color:var(--pine);font-weight:600}
+
+.stages{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+@media(max-width:720px){.stages{grid-template-columns:1fr}}
+.stage{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;
+  box-shadow:var(--shadow-sm);transition:.3s;overflow:hidden}
+.stage:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--sage)}
+.stage .num{position:absolute;top:20px;left:24px;font-size:44px;font-weight:900;color:var(--sage);opacity:.5;line-height:1}
+.stage .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--sage),var(--sage-2));
+  display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px}
+.stage h3{font-size:20px;color:var(--pine-darker);margin-bottom:12px}
+.stage ul{list-style:none;display:grid;gap:9px}
+.stage li{font-size:15px;color:var(--ink-soft);line-height:1.55;padding-inline-start:18px;position:relative}
+.stage li::before{content:'';position:absolute;right:3px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--sage)}
+.stage li b{color:var(--pine-deep)}
+
+.inside{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gets{display:grid;gap:14px;max-width:840px;margin:0 auto}
+.get{display:flex;gap:16px;align-items:flex-start;background:var(--sage-tint);border:1px solid var(--line);
+  border-radius:16px;padding:20px 22px;transition:.25s}
+.get:hover{border-color:var(--sage);transform:translateX(-4px)}
+.get .ic{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-size:22px}
+.get h3{font-size:18px;color:var(--pine-darker);margin-bottom:5px}
+.get p{font-size:15.5px;color:var(--ink-soft);line-height:1.6}
+.get p b{color:var(--ink)}
+.get .sub{list-style:none;margin-top:9px;display:grid;gap:6px}
+.get .sub li{font-size:15px;color:var(--ink-soft);line-height:1.5;padding-inline-start:16px;position:relative}
+.get .sub li::before{content:'–';position:absolute;right:0;color:var(--pine);font-weight:700}
+.get .sub li b{color:var(--ink)}
+
+.shifts{max-width:900px;margin:0 auto;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);display:grid;grid-template-columns:1fr 1fr}
+.sh-head{padding:18px 26px;font-weight:800;font-size:15px}
+.sh-head.out{background:#f1f4f1;color:var(--ink-soft);border-inline-start:1px solid var(--line)}
+.sh-head.in{background:linear-gradient(135deg,var(--sage),var(--sage-2));color:var(--pine-darker)}
+.sh-cell{padding:20px 26px 20px 46px;border-top:1px solid var(--line);font-size:16px;line-height:1.5;position:relative}
+.sh-cell.out{color:var(--ink-soft);border-inline-start:1px solid var(--line)}
+.sh-cell.out::before{content:'−';position:absolute;right:16px;top:20px;color:#b9c6bf;font-weight:800}
+.sh-cell.in{color:var(--ink);font-weight:600}
+.sh-cell.in::before{content:'✓';position:absolute;right:16px;top:20px;color:var(--pine);font-weight:800}
+@media(max-width:640px){.shifts{grid-template-columns:1fr}.sh-head.out,.sh-cell.out{display:none}.sh-cell{padding-left:26px}}
+
+.valuebox{max-width:760px;margin:0 auto;background:linear-gradient(135deg,var(--pine-deep),var(--pine-darker));
+  color:#fff;border-radius:24px;padding:40px 30px;text-align:center;box-shadow:var(--shadow)}
+.valuebox .big{font-size:clamp(34px,7vw,52px);font-weight:900;margin:6px 0}
+.valuebox p{color:#d6e6dd;font-size:16px;line-height:1.7}
+
+.price{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.price .lead{font-size:clamp(17px,2vw,21px);text-align:center;color:var(--ink);max-width:720px;margin:0 auto 14px;line-height:1.7}
+.price .lead b{color:var(--pine-deep)}
+.price .note{font-size:15.5px;text-align:center;color:var(--ink-soft);max-width:720px;margin:0 auto 40px;line-height:1.7}
+.price-card{max-width:520px;margin:0 auto;background:var(--sage-tint);border:2px solid var(--pine);border-radius:26px;
+  padding:38px 32px;text-align:center;box-shadow:var(--shadow)}
+.price-card .tag{font-size:14px;color:var(--pine);font-weight:600;letter-spacing:.02em;margin-bottom:10px}
+.price-card .amt{font-size:clamp(52px,10vw,72px);font-weight:900;color:var(--pine-darker);line-height:1}
+.price-card .amt .cur{font-size:.5em;vertical-align:super;font-weight:700}
+.price-card .once{color:var(--ink-soft);font-size:15px;margin-top:4px;margin-bottom:24px}
+.price-list{text-align:right;max-width:420px;margin:0 auto 28px;display:grid;gap:10px}
+.price-list div{display:flex;gap:10px;font-size:15.5px;align-items:flex-start}
+.price-list .c{color:var(--pine);font-weight:800}
+.price-card .fine{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+
+.faq{display:grid;gap:13px;max-width:800px;margin:0 auto}
+.qa{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 26px;box-shadow:var(--shadow-sm)}
+.qa h3{font-size:17.5px;color:var(--pine-darker);margin-bottom:7px}
+.qa p{font-size:15.5px;color:var(--ink-soft);line-height:1.65}
+
+.final{text-align:center;background:
+  radial-gradient(circle at 78% 26%,rgba(188,211,191,.5),transparent 46%),
+  linear-gradient(180deg,#eef4ef,#e3efe5)}
+.final .h2{margin-bottom:16px}
+.footer{text-align:center;color:var(--ink-soft);font-size:13px;padding:30px 20px 40px;border-top:1px solid var(--line)}
+.footer .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pine);vertical-align:middle;margin-inline-end:6px}
+
+.preface{background:var(--sage-tint)}
+.preface .narrow{padding-top:60px;padding-bottom:60px}
+.preface .pf{font-size:clamp(17px,2vw,20px);color:var(--ink);line-height:1.85;margin-bottom:20px;text-align:center;max-width:720px;margin-left:auto;margin-right:auto}
+.preface .pf b{color:var(--pine-deep);font-weight:800}
+.preface .pf-punch{font-size:clamp(23px,3.4vw,34px);font-weight:900;color:var(--pine-darker);text-align:center;margin-top:16px;line-height:1.3}
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .about-body{max-width:760px;margin:34px auto 0}
+.about .about-body p{font-size:clamp(16px,1.9vw,19px);color:var(--ink);line-height:1.85;margin-bottom:20px}
+.about .about-body p b{color:var(--pine-darker)}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2px auto 30px;max-width:660px}
+.chip-x{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--pine-deep);
+  font-weight:700;font-size:14.5px;padding:9px 16px;border-radius:100px;box-shadow:var(--shadow-sm)}
+.chip-x .x{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;
+  background:var(--sage);color:var(--pine-darker);font-size:11px;font-weight:900;flex:0 0 auto}
+/* quick facts */
+.facts{display:flex;flex-wrap:wrap;max-width:720px;margin:30px auto 0;background:#fff;border:1px solid var(--line);
+  border-radius:18px;box-shadow:var(--shadow-sm);overflow:hidden}
+.fact{flex:1 1 0;min-width:130px;padding:18px 16px;text-align:center;border-inline-start:1px solid var(--line)}
+.fact:first-child{border-inline-start:none}
+.fact .n{font-size:24px;font-weight:900;color:var(--pine-darker);line-height:1}
+.fact .l{font-size:12.5px;color:var(--ink-soft);margin-top:6px}
+@media(max-width:560px){.fact{flex-basis:50%}.fact:nth-child(2){border-inline-start:none}.fact:nth-child(n+3){border-top:1px solid var(--line)}}
+/* photo band */
+.photoband{position:relative;min-height:clamp(200px,32vw,340px);width:100%;
+  background:linear-gradient(135deg,var(--sage-2),var(--sage-tint) 55%,#f3ede0);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:24px}
+.photoband.filled{background-size:cover;background-position:center}
+.photoband .ph-t{color:var(--pine-deep);font-weight:800;font-size:16px;position:relative;z-index:1}
+.photoband .ph-s{color:var(--ink-soft);font-size:13px;position:relative;z-index:1}
+.photoband::after{content:'';position:absolute;inset:14px;border:1.5px dashed rgba(95,125,106,.35);border-radius:16px;pointer-events:none}
+/* launch price */
+.launch{display:inline-block;background:linear-gradient(135deg,var(--pine),var(--pine-deep));color:#fff;
+  font-weight:800;font-size:13px;padding:6px 16px;border-radius:100px;margin-bottom:12px;letter-spacing:.02em}
+/* lead form */
+.lead-form{max-width:440px;margin:22px auto 0;display:grid;gap:11px;text-align:right}
+.lead-form input[type=text],.lead-form input[type=tel],.lead-form input[type=email]{width:100%;padding:15px 16px;
+  border:1.5px solid var(--line);border-radius:12px;font-size:16px;font-family:inherit;background:#fff}
+.lead-form input:focus{outline:none;border-color:var(--pine)}
+.lf-err{display:none;color:#c1553f;font-size:13px;font-weight:600;margin-top:-5px}
+.lf-err.show{display:block}
+.lf-check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);line-height:1.5;cursor:pointer}
+.lf-check input{width:18px;height:18px;flex:0 0 auto;accent-color:var(--pine);margin-top:2px}
+.lf-check a{color:var(--pine-deep);font-weight:700;text-decoration:underline}
+.lead-form button{width:100%;margin-top:6px;border:none;cursor:pointer}
+.lead-form button:disabled{background:#b9c6c1;cursor:not-allowed;box-shadow:none;transform:none}
+/* sticky cta */
+.stickycta{position:fixed;bottom:0;left:0;right:0;z-index:80;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);padding:11px 18px;display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 24px rgba(62,84,72,.09)}
+.stickycta.show{display:flex}
+.stickycta .sc-p{font-weight:800;color:var(--pine-darker);font-size:14.5px}
+.stickycta .sc-p .sc-price{color:var(--pine)}
+.stickycta a{background:var(--pine-deep);color:#fff;text-decoration:none;font-weight:800;font-size:14.5px;padding:11px 24px;border-radius:100px;white-space:nowrap}
+@media(min-width:721px){.stickycta.show{display:none}}
+
+body.anim .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,.68,0,1),transform .6s cubic-bezier(.22,.68,0,1)}
+body.anim .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav>
+ <div class="nav-in">
+  <div class="nav-brand"><span class="dot"></span>RichLife<span class="sub">מוכנים כלכלית ללידה</span></div>
+  <a href="#buy" class="nav-cta">להצטרפות</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="wrap">
+  <span class="kicker"><span class="dot"></span>לזוגות ולנשים שחושבים על תינוק</span>
+  <h1>מוכנים <span class="accent">כלכלית</span> ללידה</h1>
+  <p class="sub">התוכנית שתעזור לכם להגיע מוכנים להרחבת המשפחה, לתכנן חופשת לידה של <b>יותר מ-3 חודשים</b>, ולבנות יציבות כלכלית עוד לפני שהתינוק מגיע.</p>
+  <div class="chips">
+   <span class="chip-x"><span class="x">✕</span>בלי להבין בכסף</span>
+   <span class="chip-x"><span class="x">✕</span>בלי אקסלים מסובכים</span>
+   <span class="chip-x"><span class="x">✕</span>בלי לספור ימים לחזרה לעבודה</span>
+   <span class="chip-x"><span class="x">✓</span>מתאים גם לפני היריון</span>
+  </div>
+  <div class="cta-row">
+   <a href="#buy" class="btn btn-lg">אני רוצה את הקורס · 147 ₪</a>
+   <a href="#stages" class="btn btn-ghost btn-lg">מה יש בפנים ↓</a>
+  </div>
+  <p class="note">כי כל אמא ואבא צריכים להיכנס להורות מתוך שקט, לא מתוך לחץ כלכלי.</p>
+  <div class="facts">
+   <div class="fact"><div class="n">5</div><div class="l">מודולי וידאו</div></div>
+   <div class="fact"><div class="n">5</div><div class="l">מחשבונים חכמים</div></div>
+   <div class="fact"><div class="n">✓</div><div class="l">צ'ק-ליסט זכויות</div></div>
+   <div class="fact"><div class="n">מיידית</div><div class="l">גישה לכל החיים</div></div>
+  </div>
+ </div>
+</header>
+
+<!-- PHOTO BAND -->
+<div class="photoband" id="photoband">
+ <div class="ph-t">📷 מקום לתמונה שלכם</div>
+ <div class="ph-s">צילומי ההיריון ייכנסו לכאן</div>
+</div>
+
+<!-- PREFACE -->
+<section class="preface">
+ <div class="narrow">
+  <p class="pf reveal">ילד זה דבר מדהים ומשמח. ובמקביל, זו התחייבות של שנים, והוצאה שמגיעה ל<b>מעל מיליון שקל עד גיל 18</b>.</p>
+  <p class="pf reveal">סורי, אבל אתם יודעים ש<b>אהבה לא תחליף מטרנה או גן ילדים תקין</b>.</p>
+  <p class="pf reveal">רוב ההורים מגלים שהם לא באמת מוכנים כלכלית, ומגלים את זה תוך כדי. ואז מתחיל הלחץ סביב הכסף, עד שמגיע הרגע שהילד מבקש משהו, או שאתם רוצים להשקיע בו, ואתם מסתכלים על חשבון הבנק ומבינים <b>שאין מאיפה</b>.</p>
+  <p class="pf reveal">אפשר להיות ההורה הכי אוהב בעולם, אבל כשאין יציבות כלכלית וכל חודש נגמר בלחץ, כל הבית מרגיש את זה.</p>
+  <div class="pf-punch reveal">אז כמה אתם מוכנים כלכלית כדי להביא ילד?</div>
+ </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+ <div class="narrow">
+  <div class="eyebrow reveal">// הרגע שאתם בו</div>
+  <h2 class="h2 reveal" style="margin-bottom:36px">אתם ברגע המרגש הזה, וכבר מתחילות <span class="accent">לצוץ השאלות</span></h2>
+  <p class="reveal">החלטתם להרחיב את המשפחה, או שאולי כבר גיליתם שהמסע התחיל. ולצד ההתרגשות והחלומות, מתחילה לצוץ שאלה קטנה שקשה להגיד בקול: <b>"האם אנחנו באמת מוכנים לזה כלכלית?"</b></p>
+  <p class="reveal">ומחשבה נוספת שרצה בעיקר בראש של האישה: <em>"איך אני אשלח את התינוקת שלי אחרי 3 חודשים למעון? היא צריכה את אמא שלה."</em></p>
+  <div class="pull reveal">אבל המדינה נותנת רק <span class="hl">15 שבועות בתשלום</span>, ובתוך תוככם אתם כבר מרגישים שזה פשוט לא מספיק.</div>
+  <p class="reveal">אתם לא רוצים לספור את הימים לאחור ולהרגיש שהשעון מתקתק לעבר החזרה לעבודה, רק בגלל שהכסף נגמר. אתם רואים סביבכם זוגות שמעצבים חדר יוקרתי לתינוק וקונים הכל חדש מהניילון, ולא נראה שהמחיר מטריד אותם. ומצד שני, חברים אחרים שמתלוננים בלי סוף שחופשת הלידה לא מספיקה ושהם בקושי סוגרים את החודש.</p>
+  <div class="pull reveal">ואז יש את <span class="hl">החברה ההיא</span>. זאת שיכולה להרשות לעצמה להישאר שנה שלמה בבית עם התינוק, ברוגע, בלי חרדה כלכלית לרגע.</div>
+  <p class="reveal">ואתם מסתכלים עליה ולא מבינים, איך היא עושה את זה? הרי היא לא מרוויחה הרבה יותר מכם, אתם מרוויחים פחות או יותר אותו דבר.</p>
+  <div class="quote reveal">
+   <div class="t">"ואתם רוצים גם להיות מוכנים כלכלית להרחיב את המשפחה. אבל איך עושים את זה?"</div>
+   <div class="a">בדיוק בשביל זה נבנה הקורס</div>
+  </div>
+ </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="stages">
+ <div class="wrap">
+  <div class="eyebrow reveal">// איך זה עובד</div>
+  <h2 class="h2 reveal">חמישה שלבים, מהתכנון <span class="accent">ועד הצמיחה</span></h2>
+  <p class="intro reveal">בנוי בדיוק לפי סדר הזמנים של החיים, כך שבכל שלב אתם יודעים מה לעשות עכשיו.</p>
+  <div class="stages">
+   <div class="stage reveal"><div class="num">1</div><div class="ic">💬</div><h3>מתחילים מהבסיס, שפה זוגית סביב כסף</h3>
+    <ul>
+     <li><b>עקרונות לשיחה זוגית:</b> איך נכון להעלות את הנושא הכלכלי בלי שזה יהיה מביך או טעון, ואיך בכלל מתחילים שיחה על כסף בלי שזה ירגיש כבד או מלחיץ, עם דוגמאות וסיטואציות לדבר בגובה העיניים.</li>
+     <li><b>המבנה הכלכלי שלכם:</b> נבדוק אם הדרך שבה אתם מנהלים את החשבון היום עדיין מתאימה למה שמחכה לכם כמשפחה.</li>
+     <li><b>מיפוי הכנסות והוצאות ראשוני:</b> מבינים מה קורה במשק הבית עוד לפני שהוצאות הבייבי מצטרפות.</li>
+    </ul>
+   </div>
+   <div class="stage reveal"><div class="num">2</div><div class="ic">⏳</div><h3>הפעולות הקריטיות לפני הכניסה להיריון</h3>
+    <ul>
+     <li>כאן חוסכים אלפי שקלים פשוט כי פועלים בזמן. יש דברים שחייבים לסדר עכשיו, כי עוד רגע ה"חלון" נסגר והזכויות שלכם ייפגעו.</li>
+     <li><b>ביטוחים:</b> איך לוודא שאתם מכוסים להחזרים המקסימליים על הבדיקות היקרות.</li>
+     <li><b>בדיקת שכר וזכויות:</b> מה צריך לבדוק לגבי רציפות הזכויות שלכם כדי להבטיח את דמי הלידה המקסימליים.</li>
+    </ul>
+   </div>
+   <div class="stage reveal"><div class="num">3</div><div class="ic">📊</div><h3>בונים תוכנית כלכלית ללידה ולחופשה</h3>
+    <ul>
+     <li>נערכים לשינוי האמיתי בתזרים, ובונים את התשתית שתאפשר לכם את השקט להישאר בבית כמה שתרצו.</li>
+     <li><b>כמה באמת עולה ילד?</b> הבנה של עלויות ההיריון, הלידה והשנה הראשונה, ומה חשוב לקנות ומה סתם מיותר.</li>
+     <li><b>תכנון חופשת לידה:</b> כמה צריך לחסוך כדי להיות רגועים כלכלית לתקופת הלידה.</li>
+    </ul>
+   </div>
+   <div class="stage reveal"><div class="num">4</div><div class="ic">🧾</div><h3>בתוך התהליך, מה עושים בזמן ההיריון</h3>
+    <ul>
+     <li>המסע כבר התחיל (טרימסטר 1-2), ועכשיו המטרה למקסם כל שקל שמגיע לכם מהמערכת.</li>
+     <li><b>מיצוי ה"סל":</b> איך לנצל נכון את כל ההחזרים המגיעים לכם על בדיקות וייעוצים, כך שחשבון הבנק שלכם לא ייפגע.</li>
+    </ul>
+   </div>
+   <div class="stage reveal"><div class="num">5</div><div class="ic">🌱</div><h3>צמיחה כלכלית לתינוק/ת</h3>
+    <ul>
+     <li>התינוק/ת כאן, ועוברים למצב של הגנה ובניית עתיד. איך מגנים עליהם בריאותית וכלכלית?</li>
+     <li>מה עושים עם <b>החיסכון לכל ילד</b> שמקבלים מהמדינה?</li>
+     <li>ואיך מייצרים להם הון בגיל 20 מהשקעה מינימלית?</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside" id="inside">
+ <div class="wrap">
+  <div class="eyebrow reveal">// מה תמצאו בפנים</div>
+  <h2 class="h2 reveal">כל הידע והכלים הפרקטיים, <span class="accent">במקום אחד</span></h2>
+  <p class="intro reveal">הקורס מרכז עבורכם הכל, כדי שתגיעו לרגע המרגש בביטחון מלא.</p>
+  <div class="gets">
+   <div class="get reveal"><div class="ic">💻</div><div><h3>5 מודולים של למידה (וידאו)</h3><p>כל הידע שאתם צריכים, מחולק לשיעורים קצרים וממוקדים שתוכלו לצפות בהם בקצב שלכם, ובהתאם לשלב שבו אתם נמצאים.</p></div></div>
+   <div class="get reveal"><div class="ic">📝</div><div><h3>צ'ק-ליסט "מיצוי זכויות" מלא</h3><p>המדריך המפורט שיבטיח שלא תפספסו אף סעיף בכל שלב בהיריון.</p></div></div>
+   <div class="get reveal"><div class="ic">📊</div><div><h3>מחשבונים פשוטים שעושים סדר</h3>
+    <ul class="sub">
+     <li><b>חישוב דמי לידה:</b> לדעת בדיוק כמה כסף ייכנס לכם מהביטוח הלאומי.</li>
+     <li><b>תכנון כלכלי של חופשת הלידה:</b> לתכנן מראש כדי שתוכלי להישאר בבית כמה שתרצי בראש שקט.</li>
+     <li><b>מעקב החזרים מקופת חולים וביטוחים:</b> לוודא שניצלתם כל שקל וכל הטבה שמגיעה לכם.</li>
+     <li><b>רשימת קניות ללידה:</b> רשימה חכמה שתעזור לקנות רק מה שצריך ולחסוך אלפי שקלים.</li>
+     <li><b>מיפוי הוצאות משפחתי:</b> לדעת כמה מוציאים היום ואיך להתכונן נכון לחופשת הלידה.</li>
+    </ul>
+   </div></div>
+   <div class="get reveal"><div class="ic">💬</div><div><h3>כלים לשפה זוגית כלכלית</h3><p>איך לנהל שיחות על כסף ולקבל החלטות יחד, בלי מתחים ובלי ריבים.</p></div></div>
+   <div class="get reveal"><div class="ic">📋</div><div><h3>בדיקת שכר וזכויות</h3><p>צעדים פרקטיים לוודא שאתם מקבלים את המקסימום מהמעסיק ומהמדינה, עוד לפני הלידה.</p></div></div>
+   <div class="get reveal"><div class="ic">👶</div><div><h3>בניית עתיד כלכלי לתינוק/ת</h3><p>מה לעשות עם החיסכון לכל ילד, ואיך לדאוג לו להון משמעותי בגיל 20, מהרגע הראשון ועם השקעה חודשית מינימלית.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section>
+ <div class="wrap">
+  <div class="eyebrow reveal">// מה יקרה לכם</div>
+  <h2 class="h2 reveal">מ"נראה לי שיהיה בסדר" <span class="accent">ל"אני יודע/ת שיהיה בסדר"</span></h2>
+  <p class="intro reveal">תחושת החרדה הכלכלית המעורפלת מתחלפת בביטחון שקט. הנה השינוי, נקודה מול נקודה.</p>
+  <div class="shifts reveal">
+   <div class="sh-head out">היום</div>
+   <div class="sh-head in">אחרי הקורס</div>
+   <div class="sh-cell out">חוזרים לעבודה בלחץ אחרי 15 שבועות כי "נגמר הכסף"</div>
+   <div class="sh-cell in">יודעים בדיוק איך לממן את החודשים הנוספים שאתם רוצים בבית</div>
+   <div class="sh-cell out">החזרים מקופת חולים ומביטוחים שנשארים על הרצפה</div>
+   <div class="sh-cell in">כל זכות ממומשת עד השקל האחרון, ישר לחשבון הבנק</div>
+   <div class="sh-cell out">קונים ציוד יקר ומיותר, עם רגשות אשם על כל קנייה</div>
+   <div class="sh-cell in">רוכשים מתוך רשימה ממוקדת ותקציב ידוע מראש, בלי חרטות</div>
+   <div class="sh-cell out">הכסף הוא מקור למריבות ולמתחים בזוגיות</div>
+   <div class="sh-cell in">שפה משותפת, תוכנית עבודה ומטרה ששניכם רתומים אליה</div>
+   <div class="sh-cell out">אין מושג איך בונים עתיד כלכלי לילד/ה</div>
+   <div class="sh-cell in">מהחודש הראשון, התינוק/ת כבר בדרך לעצמאות כלכלית</div>
+  </div>
+ </div>
+</section>
+
+<!-- VALUE -->
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="valuebox reveal">
+   <p>וכשהתינוק/ת נולד/ת, עם השקעה חכמה ומינימלית</p>
+   <div class="big">100,000 - 200,000 ₪</div>
+   <p>שישתחררו איתו/ה מהצבא. במקום להשקיע רק בעגלה, אתם משקיעים בתשתית שמלווה אותם לכל החיים.</p>
+  </div>
+ </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="buy">
+ <div class="wrap">
+  <div class="eyebrow reveal">// ההצטרפות</div>
+  <h2 class="h2 reveal">אז כמה עולה <span class="accent">להצטרף?</span></h2>
+  <p class="lead reveal">כמה שווה לכם עוד חודש אחד של שקט בבית עם התינוק/ת שלכם? חודש שבו את לא צריכה להסתכל על השעון בחרדה, אלא פשוט להיות שם בשבילו. <b>עבור רוב ההורים, התחושה הזו היא פשוט פרייסלס.</b></p>
+  <p class="note reveal">אני רואה זוגות שמשקיעים 5,000 ₪ בעגלה, אבל שוכחים להשקיע בתשתית שתאפשר להם ליהנות מכל זה בלי לחץ כלכלי על הכתפיים. אני לא אשתמש בטיימרים מזויפים או ב"רק היום", כי זה לא הסגנון שלי, ואני מאמינה שמי שרוצה ביטחון למשפחה שלו מבין את הערך מיד. המטרה שלי היא להנגיש את הידע הזה לכל זוג שמרחיב את המשפחה, שכל אמא תוכל לבחור להישאר בבית עוד קצת אם היא רוצה, בלי שהבנק יחליט בשבילה. ולכן בחרתי מחיר נגיש לכל כיס.</p>
+  <div class="price-card reveal">
+   <div class="tag">הקורס המלא · מוכנים כלכלית ללידה</div>
+   <div class="launch">🎉 מחיר השקה</div>
+   <div class="amt"><span class="cur">₪</span>147</div>
+   <div class="once">תשלום חד-פעמי · גישה מיידית · המחיר יעלה בקרוב</div>
+   <div class="price-list">
+    <div><span class="c">✓</span><span>5 מודולי וידאו + צ'ק-ליסט מיצוי זכויות מלא</span></div>
+    <div><span class="c">✓</span><span>מחשבונים וכלים: דמי לידה, חופשת לידה, החזרים, קניות, הוצאות</span></div>
+    <div><span class="c">✓</span><span>כלים לשפה זוגית + בדיקת שכר וזכויות</span></div>
+    <div><span class="c">✓</span><span>בניית עתיד כלכלי לתינוק/ת מהיום הראשון</span></div>
+   </div>
+   <form class="lead-form" id="leadForm" onsubmit="return false">
+    <input id="lf_name" type="text" placeholder="שם מלא" autocomplete="name">
+    <input id="lf_phone" type="tel" inputmode="tel" placeholder="טלפון נייד" autocomplete="tel">
+    <div class="lf-err" id="lf_ephone">מספר טלפון לא תקין (למשל 050-1234567)</div>
+    <input id="lf_email" type="email" inputmode="email" placeholder="אימייל" autocomplete="email">
+    <div class="lf-err" id="lf_eemail">כתובת אימייל לא תקינה</div>
+    <label class="lf-check"><input type="checkbox" id="lf_consent"><span>אני מאשר/ת לקבל דיוורים מטלי שרעבי בנימינוב.</span></label>
+    <label class="lf-check"><input type="checkbox" id="lf_terms"><span>קראתי ומסכים/ה ל<a href="https://richlife.ravpage.co.il/takanon" target="_blank" rel="noopener">תקנון</a> ול<a href="https://richlife.ravpage.co.il/pratiuy" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</span></label>
+    <button type="submit" class="btn btn-lg" id="lf_submit" disabled onclick="submitLead()">להצטרפות · לתשלום מאובטח ←</button>
+   </form>
+   <p class="fine">פחות מארוחה זוגית במסעדה, ופחות ממה שתשלמו על חבילת חיתולים וקצת מגבונים.</p>
+  </div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+ <div class="narrow">
+  <div class="eyebrow reveal">// מי אני</div>
+  <h2 class="h2 reveal">אם עוד לא הכרנו, <span class="accent">היי, אני טלי</span></h2>
+  <div class="about-body">
+   <p class="reveal">כבר 3 שנים שאני מלווה זוגות ויחידים לשליטה מלאה בכסף ולצמיחה כלכלית. למדתי ייעוץ כלכלי, ייעוץ משכנתאות וגם NLP Master, כי תכל'ס, להתנהל כלכלית זה רגשי הרבה יותר מלכתוב מספרים באקסל.</p>
+   <p class="reveal">לימדתי חינוך פיננסי בבתי ספר מכיתה ד' ועד ט', הרצאתי מול צעירים בסיכון, וליוויתי רווקים, זוגות ומשפחות מגיל 19 ועד 54, מאנשים עם מינוסים וחובות ועד אנשים עם חלומות גדולים ושאיפות להכנסה פסיבית. וגיליתי שדווקא לצעירים, <b>לפני שמתחתנים, מביאים ילדים ומתחייבים למשכנתא</b>, אפשר לעזור הכי הרבה.</p>
+   <div class="pull reveal">נולדתי לבית של מחסור וחרדה כלכלית. עולים חדשים שנאבקו לסגור את החודש, והאמונות האלה ליוו אותי שנים.</div>
+   <p class="reveal">בעקבות משבר משפחתי בזמן הצבא הבנתי שאף אחד לא ידאג לי, והתחלתי לחסוך 50% מהשכר עוד לפני שהבנתי מה זה השקעות. בגיל צעיר איבדתי גם את אבא וגם את אחי, ולא, לא הייתה ירושה, וגם לא מבוגר להישען עליו. זו הייתה תקופה שלימדה אותי שאי אפשר לבנות עתיד על "יהיה בסדר", ושאני חייבת לייצר אותו בעצמי.</p>
+   <p class="reveal">עם דרור, שהיה אז בן הזוג שלי והיום בעלי, התחלנו לבנות את העתיד שלנו סביב מטרה אחת ברורה: <b>חופש כלכלי</b>. ישבנו וחישבנו כמה אנחנו צריכים כדי להגיע לשם, והבנו שנצטרך לפעול אחרת לגמרי מהסביבה שלנו. יצרנו חיסכון אגרסיבי שלא נוגעים בו, לקחנו מינופים חכמים, והשקענו במקומות לא טריוויאליים.</p>
+   <p class="reveal">נכנסנו לעסקת הנדל"ן הראשונה שלנו ב-2021, הייתי אז בת 22.5. היום, בגיל 27, יש לנו נכסים בשווי <b>מעל 1.5 מיליון ₪</b>: שלוש השקעות נדל"ן בארץ, השקעת נדל"ן בחו"ל ותיק בשוק ההון, וכל זה בזמן שאנחנו טסים ומטיילים בעולם. בלי ירושה ובלי לוטו, רק מהתנהלות נכונה והשקעות.</p>
+   <p class="reveal">ואת כל מה שלמדתי על בשרי, את המעבר מתודעת הישרדות לביטחון ומתסכול לצמיחה, אני מלמדת היום אתכם. כדי שגם אתם תדעו איך כסף עובד, איך מייצרים יציבות, ואיך בונים עתיד כלכלי שלא תלוי בממשלה, בבוס, בירושה או במזל.</p>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section>
+ <div class="wrap">
+  <div class="eyebrow reveal">// שאלות</div>
+  <h2 class="h2 reveal">שאלות שאולי <span class="accent">עולות לכם</span></h2>
+  <div class="faq" style="margin-top:40px">
+   <div class="qa reveal"><h3>אנחנו עוד לא בהיריון, זה מוקדם מדי?</h3><p>ההפך. חלק מהדברים הכי חשובים, כמו ביטוחים ורציפות תעסוקתית, אפשר לעשות רק לפני. מי שמתחיל מוקדם מגיע מוכן ורגוע, וחוסך אלפי שקלים.</p></div>
+   <div class="qa reveal"><h3>אני לא מבינה בכסף, זה מתאים לי?</h3><p>בדיוק בשבילך. הקורס כתוב בשפה פשוטה, שלב-אחר-שלב, בלי מונחים מסובכים, עם מחשבונים שעושים את החשבון במקומך.</p></div>
+   <div class="qa reveal"><h3>מה ההבדל בין הקורס לליווי האישי?</h3><p>הקורס נותן לכם את כל הדרך לעשות זאת בעצמכם, בקצב שלכם. בליווי האישי אני איתכם, מתאימה הכל אישית וצועדת יחד אתכם.</p></div>
+   <div class="qa reveal"><h3>איך מקבלים את הקורס?</h3><p>מיד אחרי התשלום נפתחת לכם גישה מלאה לכל המודולים, המחשבונים והצ'ק-ליסטים. תשלום חד-פעמי.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+ <div class="wrap">
+  <h2 class="h2 reveal">להביא ילד לעולם מתוך <span class="accent">שקט, לא מתוך לחץ</span></h2>
+  <p class="intro reveal">כל חודש שמתחילים בו מראש עובד לטובתכם, ולטובת התינוק/ת. בואו נעשה את זה נכון.</p>
+  <div style="text-align:center"><a href="#buy" class="btn btn-lg">אני רוצה את הקורס · 147 ₪</a></div>
+ </div>
+</section>
+
+<div class="footer"><span class="dot"></span> RichLife · טלי בנימינוב · יעוץ פיננסי לחיים מאושרים ומעושרים</div>
+
+<div class="stickycta" id="stickycta">
+ <div class="sc-p">מוכנים כלכלית ללידה · <span class="sc-price">מחיר השקה 147 ₪</span></div>
+ <a href="#buy">להצטרפות</a>
+</div>
+
+<script>
+const GROW_URL="#";
+function lfValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+function lfValidPhone(v){return /^0\d{8,9}$/.test(v.replace(/[-\s]/g,''));}
+function lfCheck(){
+  var nm=document.getElementById('lf_name').value.trim();
+  var ph=document.getElementById('lf_phone').value.trim();
+  var em=document.getElementById('lf_email').value.trim();
+  var okP=lfValidPhone(ph),okE=lfValidEmail(em);
+  document.getElementById('lf_ephone').classList.toggle('show',ph.length>0&&!okP);
+  document.getElementById('lf_eemail').classList.toggle('show',em.length>0&&!okE);
+  document.getElementById('lf_submit').disabled=!(nm.length>1&&okP&&okE&&document.getElementById('lf_consent').checked&&document.getElementById('lf_terms').checked);
+}
+['lf_name','lf_phone','lf_email'].forEach(function(id){var e=document.getElementById(id);if(e)e.addEventListener('input',lfCheck);});
+['lf_consent','lf_terms'].forEach(function(id){var e=document.getElementById(id);if(e)e.addEventListener('change',lfCheck);});
+function submitLead(){
+  var lead={name:document.getElementById('lf_name').value.trim(),phone:document.getElementById('lf_phone').value.trim(),email:document.getElementById('lf_email').value.trim()};
+  /* TODO: capture lead (Google Sheet + Rav Messer) here before redirecting */
+  location.href=GROW_URL;
+}
+(function(){var sc=document.getElementById('stickycta');var hero=document.querySelector('.hero');
+function u(){if(!hero||!sc)return;sc.classList.toggle('show',(window.scrollY||0)>hero.offsetHeight);}
+addEventListener('scroll',u,{passive:true});u();})();
+(function(){var b=document.getElementById('progress');function u(){var s=window.scrollY||document.documentElement.scrollTop;var d=document.documentElement.scrollHeight-document.documentElement.clientHeight;b.style.width=(d>0?(s/d)*100:0)+'%';}addEventListener('scroll',u,{passive:true});u();})();
+(function(){var els=document.querySelectorAll('.reveal');document.body.classList.add('anim');function showAll(){els.forEach(function(e){e.classList.add('in');});}
+if(!('IntersectionObserver'in window)){showAll();return;}
+var o=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+els.forEach(function(e){o.observe(e);});
+setTimeout(showAll,2600);})();
+</script>
+</body>
+</html>
