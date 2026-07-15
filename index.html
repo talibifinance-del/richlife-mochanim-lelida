@@ -209,7 +209,17 @@ section{padding:70px 0}
 
 body.anim .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,.68,0,1),transform .6s cubic-bezier(.22,.68,0,1)}
 body.anim .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.stages .stage.reveal:nth-child(2),.gets .get.reveal:nth-child(2){transition-delay:.09s}
+.stages .stage.reveal:nth-child(3),.gets .get.reveal:nth-child(3){transition-delay:.18s}
+.stages .stage.reveal:nth-child(4),.gets .get.reveal:nth-child(4){transition-delay:.27s}
+.stages .stage.reveal:nth-child(5),.gets .get.reveal:nth-child(5){transition-delay:.36s}
+.gets .get.reveal:nth-child(6){transition-delay:.45s}
+.price-list div{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
+.price-card.in .price-list div{opacity:1;transform:none}
+.price-card.in .price-list div:nth-child(2){transition-delay:.08s}
+.price-card.in .price-list div:nth-child(3){transition-delay:.16s}
+.price-card.in .price-list div:nth-child(4){transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal,.price-list div{opacity:1!important;transform:none!important;transition:none}}
 </style>
 </head>
 <body>
@@ -227,7 +237,7 @@ body.anim .reveal.in{opacity:1;transform:none}
   <span class="kicker"><span class="dot"></span>לזוגות ולנשים שחושבים על תינוק</span>
   <h1>מוכנים <span class="accent">כלכלית</span> ללידה</h1>
   <p class="sub">התוכנית שתעזור לכם להגיע מוכנים להרחבת המשפחה, לתכנן חופשת לידה של <b>יותר מ-3 חודשים</b>, ולבנות יציבות כלכלית עוד לפני שהתינוק מגיע.</p>
-  <div class="chips">
+  <div class="chips reveal">
    <span class="chip-x"><span class="x">✕</span>בלי להבין בכסף</span>
    <span class="chip-x"><span class="x">✕</span>בלי אקסלים מסובכים</span>
    <span class="chip-x"><span class="x">✕</span>בלי לספור ימים לחזרה לעבודה</span>
@@ -238,9 +248,9 @@ body.anim .reveal.in{opacity:1;transform:none}
    <a href="#stages" class="btn btn-ghost btn-lg">מה יש בפנים ↓</a>
   </div>
   <p class="note">כי כל אמא ואבא צריכים להיכנס להורות מתוך שקט, לא מתוך לחץ כלכלי.</p>
-  <div class="facts">
-   <div class="fact"><div class="n">5</div><div class="l">מודולי וידאו</div></div>
-   <div class="fact"><div class="n">5</div><div class="l">מחשבונים חכמים</div></div>
+  <div class="facts reveal">
+   <div class="fact"><div class="n"><span class="cu" data-to="5">0</span></div><div class="l">מודולי וידאו</div></div>
+   <div class="fact"><div class="n"><span class="cu" data-to="5">0</span></div><div class="l">מחשבונים חכמים</div></div>
    <div class="fact"><div class="n">✓</div><div class="l">צ'ק-ליסט זכויות</div></div>
    <div class="fact"><div class="n">מיידית</div><div class="l">גישה לכל החיים</div></div>
   </div>
@@ -380,7 +390,7 @@ body.anim .reveal.in{opacity:1;transform:none}
  <div class="wrap">
   <div class="valuebox reveal">
    <p>וכשהתינוק/ת נולד/ת, עם השקעה חכמה ומינימלית</p>
-   <div class="big">100,000 - 200,000 ₪</div>
+   <div class="big"><span class="cu" data-to="100000">0</span> - <span class="cu" data-to="200000">0</span> ₪</div>
    <p>שישתחררו איתו/ה מהצבא. במקום להשקיע רק בעגלה, אתם משקיעים בתשתית שמלווה אותם לכל החיים.</p>
   </div>
  </div>
@@ -396,7 +406,7 @@ body.anim .reveal.in{opacity:1;transform:none}
   <div class="price-card reveal">
    <div class="tag">הקורס המלא · מוכנים כלכלית ללידה</div>
    <div class="launch">🎉 מחיר השקה</div>
-   <div class="amt"><span class="cur">₪</span>147</div>
+   <div class="amt"><span class="cur">₪</span><span class="cu" data-to="147">0</span></div>
    <div class="once">תשלום חד-פעמי · גישה מיידית · המחיר יעלה בקרוב</div>
    <div class="price-list">
     <div><span class="c">✓</span><span>5 מודולי וידאו + צ'ק-ליסט מיצוי זכויות מלא</span></div>
@@ -430,7 +440,7 @@ body.anim .reveal.in{opacity:1;transform:none}
    <div class="pull reveal">נולדתי לבית של מחסור וחרדה כלכלית. עולים חדשים שנאבקו לסגור את החודש, והאמונות האלה ליוו אותי שנים.</div>
    <p class="reveal">בעקבות משבר משפחתי בזמן הצבא הבנתי שאף אחד לא ידאג לי, והתחלתי לחסוך 50% מהשכר עוד לפני שהבנתי מה זה השקעות. בגיל צעיר איבדתי גם את אבא וגם את אחי, ולא, לא הייתה ירושה, וגם לא מבוגר להישען עליו. זו הייתה תקופה שלימדה אותי שאי אפשר לבנות עתיד על "יהיה בסדר", ושאני חייבת לייצר אותו בעצמי.</p>
    <p class="reveal">עם דרור, שהיה אז בן הזוג שלי והיום בעלי, התחלנו לבנות את העתיד שלנו סביב מטרה אחת ברורה: <b>חופש כלכלי</b>. ישבנו וחישבנו כמה אנחנו צריכים כדי להגיע לשם, והבנו שנצטרך לפעול אחרת לגמרי מהסביבה שלנו. יצרנו חיסכון אגרסיבי שלא נוגעים בו, לקחנו מינופים חכמים, והשקענו במקומות לא טריוויאליים.</p>
-   <p class="reveal">נכנסנו לעסקת הנדל"ן הראשונה שלנו ב-2021, הייתי אז בת 22.5. היום, בגיל 27, יש לנו נכסים בשווי <b>מעל 1.5 מיליון ₪</b>: שלוש השקעות נדל"ן בארץ, השקעת נדל"ן בחו"ל ותיק בשוק ההון, וכל זה בזמן שאנחנו טסים ומטיילים בעולם. בלי ירושה ובלי לוטו, רק מהתנהלות נכונה והשקעות.</p>
+   <p class="reveal">נכנסנו לעסקת הנדל"ן הראשונה שלנו ב-2021, הייתי אז בת 22.5. היום, בגיל 27, יש לנו נכסים בשווי <b>מעל <span class="cu" data-to="1.5" data-dec="1">0</span> מיליון ₪</b>: שלוש השקעות נדל"ן בארץ, השקעת נדל"ן בחו"ל ותיק בשוק ההון, וכל זה בזמן שאנחנו טסים ומטיילים בעולם. בלי ירושה ובלי לוטו, רק מהתנהלות נכונה והשקעות.</p>
    <p class="reveal">ואת כל מה שלמדתי על בשרי, את המעבר מתודעת הישרדות לביטחון ומתסכול לצמיחה, אני מלמדת היום אתכם. כדי שגם אתם תדעו איך כסף עובד, איך מייצרים יציבות, ואיך בונים עתיד כלכלי שלא תלוי בממשלה, בבוס, בירושה או במזל.</p>
   </div>
  </div>
@@ -489,6 +499,17 @@ function submitLead(){
 (function(){var sc=document.getElementById('stickycta');var hero=document.querySelector('.hero');
 function u(){if(!hero||!sc)return;sc.classList.toggle('show',(window.scrollY||0)>hero.offsetHeight);}
 addEventListener('scroll',u,{passive:true});u();})();
+/* count-up numbers (0 -> target on scroll into view) */
+function animCount(el){
+  var to=parseFloat(el.getAttribute('data-to'))||0,dec=parseInt(el.getAttribute('data-dec')||'0',10),dur=1500,start=null;
+  function fmt(v){return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});}
+  function step(ts){if(start===null)start=ts;var p=Math.min((ts-start)/dur,1);el.textContent=fmt(to*(1-Math.pow(1-p,3)));if(p<1){requestAnimationFrame(step);}else{el.textContent=fmt(to);}}
+  requestAnimationFrame(step);
+}
+(function(){var cs=document.querySelectorAll('.cu');if(!cs.length)return;
+if(!('IntersectionObserver'in window)){cs.forEach(animCount);return;}
+var o=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){animCount(x.target);o.unobserve(x.target);}});},{threshold:.6});
+cs.forEach(function(e){o.observe(e);});})();
 (function(){var b=document.getElementById('progress');function u(){var s=window.scrollY||document.documentElement.scrollTop;var d=document.documentElement.scrollHeight-document.documentElement.clientHeight;b.style.width=(d>0?(s/d)*100:0)+'%';}addEventListener('scroll',u,{passive:true});u();})();
 (function(){var els=document.querySelectorAll('.reveal');document.body.classList.add('anim');function showAll(){els.forEach(function(e){e.classList.add('in');});}
 if(!('IntersectionObserver'in window)){showAll();return;}
