@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<!-- ════════════════════════════════════════════════════════════════
+   RichLife · דף מכר לקורס "מוכנים כלכלית ללידה" · v2 (נבנה על מבנה דף first-invest, 19.8.26)
+   הערות טלי 16.7.26: בלי זהב (ירוק/מרווה + טרקוטה ל"לא" בלבד) · בלי מחיר
+   עד סקשן המחיר (פס המספרים נמחק) · הדגשות בסיפור · חץ הזמנה ·
+   מסע 5 שלבים אנכי עם קו התקדמות · טבלת היום/אחרי ב"מה יקרה לך אחרי" ·
+   התנגדות בשורות קצרות · סדר סוף: מחיר+טופס → ביו → שאלות.
+   ⚠️ אל תשנו את חיווט הטופס (action + fields + hidden) - חיבור חי לרב מסר.
+═════════════════════════════════════════════════════════════════ -->
+<html lang="he" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+
+<!-- Google Analytics 4 (G-WEKSN0J1BF) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEKSN0J1BF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WEKSN0J1BF');
+</script>
+<!-- End Google Analytics -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#e9f1f2">
+<title>מוכנים כלכלית ללידה · קורס דיגיטלי · RichLife</title>
+<meta name="description" content="קורס דיגיטלי של טלי בנימינוב שרעבי (RichLife) שמלווה אתכם מהרגע שחושבים על תינוק ועד השנה הראשונה: קרן חופשת לידה, מיצוי זכויות, ובניית עתיד כלכלי לתינוק/ת.">
+<!-- תצוגת שיתוף (וואטסאפ/פייסבוק) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lelida.richlife.co.il/">
+<meta property="og:title" content="מוכנים כלכלית ללידה · קורס דיגיטלי מאת טלי בנימינוב שרעבי">
+<meta property="og:description" content="להיכנס להורות מתוך שקט, לא מתוך לחץ כלכלי. תוכנית מסודרת לפי סדר הזמנים של החיים, מהרגע שחושבים על תינוק ועד השנה הראשונה.">
+<meta property="og:image" content="https://lelida.richlife.co.il/images/og-cover.jpg">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+<!-- Meta Pixel (RichLife 208911198828875) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '208911198828875');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=208911198828875&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===== טוקנים - הפלטה הבהירה של RichLife (בלי זהב; טרקוטה רק לשליליים) ===== */
+:root {
+  --font: 'Heebo', system-ui, sans-serif;
+  --paper: #e9f1f2;
+  --sage-tint: #eef4ef;
+  --white: #ffffff;
+  --ink: #1e2b25;
+  --ink-soft: #51625a;
+  --line: #d3e0df;
+  --pine: #5f7d6a;        --pine-rgb: 95,125,106;
+  --pine-deep: #3e5448;
+  --pine-darker: #2f4036;
+  --sage: #bcd3bf;        --sage-rgb: 188,211,191;
+  --red: #c1553f;         --red-rgb: 193,85,63;
+  --red-ink: #a8462f;     /* טרקוטה לטקסט על רקע בהיר - עוברת AA (5.1:1). --red נשאר לצורות ואייקונים */
+  --on-dark: #eef4ef;
+  --on-dark-soft: rgba(238,244,239,.75);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--paper); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* ===== SCROLL PROGRESS BAR ===== */
+#scroll-progress { position: fixed; top: 0; left: 0; z-index: 999; height: 3px; width: 0%; background: linear-gradient(90deg, var(--pine-deep), var(--sage)); transition: width .05s linear; pointer-events: none; }
+
+/* ===== SCENE - רקע בהיר אוורירי ===== */
+.scene { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.blob { position: absolute; border-radius: 50%; filter: blur(70px); }
+.blob-a { top: -12%; right: -14%; width: 760px; height: 760px; background: radial-gradient(ellipse at center, rgba(var(--sage-rgb),.55) 0%, rgba(var(--sage-rgb),.18) 45%, transparent 70%); animation: fl-a 14s ease-in-out infinite; }
+.blob-b { top: 30%; left: -16%; width: 700px; height: 700px; background: radial-gradient(ellipse at center, rgba(var(--pine-rgb),.2) 0%, rgba(var(--pine-rgb),.07) 45%, transparent 70%); animation: fl-b 18s ease-in-out infinite; }
+.blob-c { bottom: -14%; right: 20%; width: 620px; height: 620px; background: radial-gradient(ellipse at center, rgba(var(--sage-rgb),.35) 0%, rgba(var(--sage-rgb),.1) 50%, transparent 72%); animation: fl-c 22s ease-in-out infinite; }
+@keyframes fl-a { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-40px,50px) scale(1.07)} }
+@keyframes fl-b { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(50px,30px) scale(1.08)} }
+@keyframes fl-c { 0%,100%{transform:translate(0,0)} 33%{transform:translate(-20px,-30px)} 66%{transform:translate(15px,10px)} }
+.scene-ring { position: absolute; top: 34%; left: 50%; width: 720px; height: 720px; transform: translate(-50%,-50%); border-radius: 50%; border: 1px solid rgba(var(--pine-rgb),.14); animation: spin-fwd 40s linear infinite; }
+.scene-ring::after { content: ''; position: absolute; top: -3px; left: 50%; width: 6px; height: 6px; border-radius: 50%; background: var(--pine); transform: translateX(-50%); box-shadow: 0 0 12px 4px rgba(var(--pine-rgb),.5); }
+@keyframes spin-fwd { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+.scene-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(var(--pine-rgb),.05) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--pine-rgb),.05) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 75% 55% at 50% 34%, black 0%, transparent 100%); }
+
+/* ===== NAV ===== */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 90; height: 66px; padding: 0 52px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(22px) saturate(150%); background: rgba(238,244,239,.88); border-bottom: 1px solid var(--line); }
+.nav-left { display: flex; align-items: center; gap: 16px; }
+.brand-mark { font-weight: 900; font-size: 16px; letter-spacing: .05em; color: var(--pine-deep); }
+.brand-by { font-weight: 500; font-size: 12px; letter-spacing: .02em; color: var(--ink-soft); }
+.nav-divider { width: 1px; height: 22px; background: var(--line); }
+.nav-sub { font-size: 11px; font-weight: 400; letter-spacing: .12em; color: var(--ink-soft); }
+.nav-center { display: flex; align-items: center; gap: 8px; }
+.pill { padding: 6px 14px; border-radius: 100px; font-size: 11px; letter-spacing: .09em; font-weight: 500; border: 1px solid; display: flex; align-items: center; gap: 6px; }
+.pill-pine { border-color: rgba(var(--pine-rgb),.35); color: var(--pine-deep); background: rgba(var(--pine-rgb),.08); }
+.pill-plain { border-color: var(--line); color: var(--ink-soft); background: rgba(255,255,255,.5); }
+.live-dot { width:5px; height:5px; border-radius:50%; background:#3f9d63; animation:blink 2s ease infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.nav-cta { background: linear-gradient(120deg, var(--pine-deep) 0%, var(--pine) 100%); color: #fff; font-weight: 700; font-size: 14px; padding: 12px 28px; border-radius: 100px; text-decoration: none; letter-spacing: .03em; box-shadow: 0 4px 22px rgba(var(--pine-rgb),.35); transition: all .25s; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 32px rgba(var(--pine-rgb),.5); }
+
+/* ===== HERO ===== */
+.hero { position: relative; z-index: 1; padding: 58px 32px 40px; overflow: hidden; }
+.hero-grid { max-width: 880px; margin: 0 auto; position: relative; z-index: 3; }
+.hero-copy { text-align: center; }
+.hero-copy .cta-group { justify-content: center; }
+.pre-head { display: inline-flex; align-items: center; gap: 10px; background: rgba(var(--pine-rgb),.08); border: 1px solid rgba(var(--pine-rgb),.28); border-radius: 100px; padding: 10px 22px; font-size: 13px; font-weight: 500; letter-spacing: .02em; color: var(--pine-deep); margin-bottom: 30px; backdrop-filter: blur(8px); }
+.pre-dot { width:7px; height:7px; border-radius:50%; background:var(--pine); animation:blink 2s ease infinite; }
+h1.hero-h1 { font-weight: 900; font-size: clamp(27px, 3.2vw, 43px); line-height: 1.24; letter-spacing: -.018em; margin-bottom: 20px; text-wrap: balance; color: var(--ink); }
+.h1-warm { background: linear-gradient(120deg, var(--pine-deep) 0%, var(--pine) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline; }
+.bli-chips { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 10px 0 30px; }
+.bli-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.bli-chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 100px; background: #fff; border: 1px solid rgba(var(--pine-rgb),.3); font-weight: 700; font-size: clamp(13px, 1.35vw, 15px); color: var(--ink); box-shadow: 0 4px 14px rgba(30,43,37,.06); transition: all .25s; }
+.bli-chip:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(var(--pine-rgb),.16); border-color: rgba(var(--pine-rgb),.5); }
+.bli-chip-x { width: 16px; height: 16px; border-radius: 50%; background: var(--red); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 900; flex-shrink: 0; }
+/* ===== ההוק הכהה בפתיח ===== */
+.hero-hook { max-width: 1180px; margin: 0 auto 28px; text-align: center; position: relative; z-index: 3; }
+.hero-hook-inner { display: inline-block; background: linear-gradient(150deg, var(--pine-darker) 0%, var(--pine-deep) 85%); color: var(--on-dark); border-radius: 100px; padding: 13px 30px; box-shadow: 0 14px 36px rgba(47,64,54,.3); font-size: clamp(13.5px,1.5vw,16.5px); line-height: 1.65; font-weight: 500; }
+.hero-hook-inner .hh-quote { font-weight: 900; font-size: 1.12em; color: #fff; }
+.hero-hook-inner .hh-tail { display: block; color: rgba(238,244,239,.8); }
+@media (max-width: 880px) { .hero-hook-inner { border-radius: 20px; padding: 14px 20px; } }
+.sub-promise { font-size: clamp(17.5px,2.15vw,23px); font-weight: 500; line-height: 1.75; color: var(--ink); margin: 0 auto 28px; max-width: 720px; }
+.sub-promise strong { color: var(--ink); font-weight: 700; }
+.sub-promise .warm { color: #3f9d63; font-weight: 800; }
+.tw-cursor { display: inline-block; width: 2px; background: var(--pine); animation: tw-blink .7s step-end infinite; margin-right: 2px; vertical-align: text-bottom; }
+@keyframes tw-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.cta-group { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.cta-primary { background: linear-gradient(120deg, var(--pine-deep) 0%, var(--pine) 100%); color: #fff; font-weight: 800; font-size: 17px; padding: 20px 42px; border-radius: 14px; text-decoration: none; letter-spacing: .01em; box-shadow: 0 10px 34px rgba(var(--pine-rgb),.4); transition: all .28s; position: relative; overflow: hidden; display: inline-block; }
+.cta-primary::after { content: ''; position: absolute; top: 0; bottom: 0; left: -50%; width: 35%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 50%, transparent 100%); transform: skewX(-22deg); animation: shimmer-sweep 3.6s ease-in-out infinite; }
+@keyframes shimmer-sweep { 0% { left: -50%; } 60%, 100% { left: 130%; } }
+.cta-primary:hover { transform: translateY(-3px) scale(1.015); box-shadow: 0 16px 44px rgba(var(--pine-rgb),.55); }
+.cta-secondary { color: var(--ink-soft); font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; padding: 20px 24px; border: 1px solid rgba(30,43,37,.14); border-radius: 14px; transition: all .25s; background: rgba(255,255,255,.55); }
+.cta-secondary:hover { border-color: rgba(var(--pine-rgb),.45); color: var(--pine-deep); }
+.hero-visual { position: relative; max-width: 560px; margin: 48px auto 0; }
+.hero-img-card { border-radius: 26px; overflow: hidden; box-shadow: 0 34px 80px rgba(62,84,72,.28), 0 6px 20px rgba(62,84,72,.12); border: 6px solid #fff; transform: rotate(-1.5deg); animation: hero-float 7s ease-in-out infinite; transition: transform .4s; }
+.hero-img-card:hover { transform: rotate(0deg) scale(1.02); }
+@keyframes hero-float { 0%,100%{translate:0 0} 50%{translate:0 -12px} }
+.hero-img-card img { display: block; width: 100%; height: auto; }
+.hero-badge { position: absolute; bottom: -18px; right: -10px; background: linear-gradient(120deg, var(--pine-deep), var(--pine)); color: #fff; font-weight: 800; font-size: 14.5px; padding: 12px 22px; border-radius: 100px; box-shadow: 0 10px 30px rgba(var(--pine-rgb),.4); animation: hero-float 7s ease-in-out infinite reverse; }
+
+/* ===== STORY / PROBLEM ===== */
+.story { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 100px 48px 70px; }
+.section-label { font-size: 11px; letter-spacing: .2em; color: #456051; font-weight: 700; margin-bottom: 26px; }   /* היה var(--pine) 3.96:1 - נכשל בתקן בגודל 11px. עכשיו 6:1 */
+.story h2 { font-weight: 900; font-size: clamp(30px,3.9vw,50px); line-height: 1.12; letter-spacing: -.025em; color: var(--ink); margin-bottom: 40px; }
+.story h2 .gold { background: linear-gradient(120deg, var(--pine-deep), var(--pine)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.story p { font-size: clamp(17px,1.9vw,20px); font-weight: 400; line-height: 1.85; margin-bottom: 24px; color: var(--ink-soft); }
+.hl-word { color: rgba(30,43,37,.68); transition: color .25s ease; }   /* .68 ולא .24 - במצב הכבוי הטקסט חייב לעבור ניגודיות AA (4.7:1) */
+.hl-word.lit { color: rgba(30,43,37,.92); }
+.story p strong { font-weight: 800; color: var(--ink); }
+.story p em { color: #4d6857; font-style: normal; font-weight: 800; }   /* היה pine-deep שנקרא כמו שחור. עכשיו ירוק שרואים שהוא ירוק, ועדיין 5.3:1 */
+.story p .neg { color: var(--red-ink); font-style: normal; font-weight: 800; }
+.story-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 38px 0; }
+.story-list li { display: flex; align-items: center; gap: 16px; font-size: clamp(15.5px,1.8vw,19px); line-height: 1.6; color: var(--ink); padding: 18px 22px; background: #fff; border: 1px solid var(--line); border-radius: 14px; transition: all .3s; box-shadow: 0 4px 14px rgba(30,43,37,.04); }
+.story-list li:hover { border-color: rgba(var(--pine-rgb),.4); transform: translateX(-4px); box-shadow: 0 10px 26px rgba(var(--pine-rgb),.14); }
+.li-icon { width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0; background: linear-gradient(135deg, rgba(var(--pine-rgb),.14), rgba(var(--sage-rgb),.3)); border: 1px solid rgba(var(--pine-rgb),.2); display: flex; align-items: center; justify-content: center; font-size: 17px; }
+.quote-block { margin-top: 48px; padding: 38px 44px; background: linear-gradient(135deg, rgba(var(--sage-rgb),.35) 0%, rgba(var(--sage-rgb),.15) 100%); border: 1px solid rgba(var(--pine-rgb),.22); border-radius: 20px; position: relative; overflow: hidden; }
+.quote-block::before { content: '"'; position: absolute; top: -14px; right: 20px; font-family: Georgia, serif; font-size: 130px; line-height: 1; color: rgba(var(--pine-rgb),.16); pointer-events: none; }
+.quote-text { font-size: clamp(18px,2vw,23px); font-weight: 700; line-height: 1.55; color: var(--ink); margin-bottom: 14px; font-style: italic; }
+.quote-attr { font-size: 13px; font-weight: 500; letter-spacing: .08em; color: var(--pine-deep); }
+
+/* ===== חץ הזמנה ===== */
+.scroll-invite { text-align: center; padding: 26px 20px 60px; position: relative; z-index: 1; }
+.scroll-invite .si-text { font-weight: 900; font-size: clamp(20px,2.5vw,29px); color: var(--pine-deep); margin-bottom: 10px; }
+.scroll-invite a { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--pine); font-size: 34px; line-height: .7; animation: bounce-down 1.8s ease-in-out infinite; }
+@keyframes bounce-down { 0%,100%{transform:translateY(0);opacity:.9} 50%{transform:translateY(10px);opacity:.5} }
+
+/* ===== LIGHT SECTION wrapper ===== */
+.light-section { position: relative; z-index: 1; }
+.light-section.alt { background: linear-gradient(180deg, var(--sage-tint) 0%, var(--paper) 100%); }
+.light-section.white { background: #fff; }
+.light-wrap { max-width: 1180px; margin: 0 auto; padding: 104px 48px; }
+.light-wrap.narrow { max-width: 920px; }
+.light-eyebrow { font-size: 11px; letter-spacing: .22em; font-weight: 700; color: var(--pine); margin-bottom: 22px; }
+.light-h2 { font-weight: 900; font-size: clamp(30px,4vw,52px); line-height: 1.1; letter-spacing: -.025em; color: var(--ink); margin-bottom: 24px; }
+.light-h2 .orange { color: var(--pine); }
+.light-intro { font-size: clamp(16.5px,1.8vw,20px); font-weight: 400; line-height: 1.82; color: var(--ink-soft); max-width: 800px; margin-bottom: 52px; }
+.light-intro strong { color: var(--ink); font-weight: 700; }
+.light-intro .neg { color: var(--red-ink); font-weight: 800; }
+.light-intro .pos { color: var(--pine-deep); font-weight: 800; }
+.solution-card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 34px 38px; box-shadow: 0 18px 44px rgba(62,84,72,.1); max-width: 800px; margin-bottom: 26px; }
+.solution-card p { font-size: clamp(17px,1.95vw,21px); line-height: 1.85; color: var(--ink); margin-bottom: 14px; }
+.solution-card p:last-child { margin-bottom: 0; }
+.solution-card .neg { color: var(--red-ink); font-weight: 800; }
+.solution-card .pos { color: var(--pine-deep); font-weight: 800; }
+.solution-tail { font-size: clamp(16px,1.8vw,19px); line-height: 1.8; color: var(--ink-soft); max-width: 800px; }
+.solution-tail strong { color: var(--ink); font-weight: 800; }
+
+/* ===== SHIFTS TABLE ===== */
+.shifts-table { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 26px 60px rgba(62,84,72,.1); }
+.sh-head { padding: 22px 30px; font-size: 12px; letter-spacing: .14em; font-weight: 700; }
+.sh-head.out { background: rgba(var(--red-rgb),.06); color: var(--red-ink); border-left: 1px solid var(--line); }   /* 5.4:1 במקום 4.19:1 */
+.sh-head.in { background: linear-gradient(135deg, rgba(var(--pine-rgb),.14), rgba(var(--sage-rgb),.2)); color: var(--pine-deep); }
+.sc-out { padding: 22px 40px 22px 26px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); font-size: 17px; line-height: 1.5; color: rgba(30,43,37,.72); position: relative; }   /* היה .48 = 2.9:1, נכשל. עכשיו 5.2:1 */
+.sc-out::before { content: "−"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: rgba(var(--red-rgb),.6); font-size: 18px; font-weight: 700; }
+.sc-in { padding: 22px 40px 22px 26px; border-top: 1px solid var(--line); font-size: 17px; line-height: 1.5; color: var(--ink); font-weight: 700; position: relative; }
+.sc-in::before { content: "✓"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--pine-deep); font-size: 17px; font-weight: 900; }   /* וי, לא פלוס - זה מה שטלי אהבה בגרסה הקודמת */
+.shifts-title { font-weight: 900; font-size: clamp(21px,2.4vw,28px); color: var(--ink); margin: 54px 0 20px; }
+
+/* ===== JOURNEY - מסע 5 השלבים ===== */
+.how { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 104px 48px; }
+.how h2 { font-weight: 900; font-size: clamp(28px,3.7vw,48px); line-height: 1.14; letter-spacing: -.025em; color: var(--ink); margin-bottom: 16px; }
+.how h2 .gold { background: linear-gradient(120deg, var(--pine-deep), var(--pine)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.how-intro { font-size: clamp(16px,1.8vw,19px); line-height: 1.7; color: var(--ink-soft); max-width: 740px; margin-bottom: 52px; }
+.journey { position: relative; padding-right: 58px; }
+.journey-track { position: absolute; top: 8px; bottom: 8px; right: 21px; width: 3px; background: var(--line); border-radius: 3px; }
+.journey-fill { position: absolute; top: 0; right: 0; width: 100%; height: 0; background: linear-gradient(180deg, var(--pine-deep), var(--pine)); border-radius: 3px; transition: height .2s ease-out; }
+.j-step { position: relative; margin-bottom: 26px; }
+.j-step:last-child { margin-bottom: 0; }
+.j-node { position: absolute; top: 26px; right: -58px; width: 46px; height: 46px; border-radius: 50%; background: #fff; border: 3px solid var(--line); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; color: var(--ink-soft); transition: all .4s; z-index: 2; }
+.j-step.lit .j-node { background: linear-gradient(135deg, var(--pine-deep), var(--pine)); border-color: var(--pine); color: #fff; box-shadow: 0 6px 20px rgba(var(--pine-rgb),.45); transform: scale(1.06); }
+.j-card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 32px 30px 28px; box-shadow: 0 6px 18px rgba(30,43,37,.05); transition: all .45s; opacity: .45; transform: translateX(14px); }
+.j-step.lit .j-card { opacity: 1; transform: translateX(0); border-color: rgba(var(--pine-rgb),.4); box-shadow: 0 20px 44px rgba(62,84,72,.13); }
+.j-emoji { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(135deg, rgba(var(--pine-rgb),.13), rgba(var(--sage-rgb),.32)); border: 1px solid rgba(var(--pine-rgb),.22); font-size: 24px; margin-bottom: 14px; }
+.j-tag { display: inline-block; font-size: 10px; letter-spacing: .18em; font-weight: 700; color: var(--pine); margin-bottom: 8px; margin-right: 12px; }
+.j-h3 { font-weight: 800; font-size: clamp(19px,2vw,23px); color: var(--ink); margin-bottom: 10px; line-height: 1.3; }
+.j-text { font-size: clamp(14.5px,1.6vw,16.5px); line-height: 1.72; color: var(--ink-soft); }
+.j-points { margin: 10px 0 0; padding-right: 20px; }
+.j-points li { font-size: clamp(14.5px,1.6vw,16.5px); line-height: 1.7; color: var(--ink-soft); margin-bottom: 5px; }
+.j-points li::marker { color: var(--pine); }
+.j-goal { margin-top: 16px; background: rgba(var(--sage-rgb),.24); border: 1px solid rgba(var(--pine-rgb),.16); border-radius: 14px; padding: 15px 18px; }
+.j-goal .g-label { display: block; font-weight: 800; color: var(--pine-deep); font-size: 14.5px; margin-bottom: 6px; }
+.j-goal p { font-size: 15px; line-height: 1.68; color: var(--ink-soft); margin: 0; }
+.j-goal ul { margin: 0; padding-right: 20px; }
+.j-goal li { font-size: 15px; line-height: 1.68; color: var(--ink-soft); margin-bottom: 4px; }
+/* ===== סיפור: תת-כותרת + פער + "יש פחד" ===== */
+.story h3.sub { font-weight: 900; font-size: clamp(22px,2.7vw,31px); color: var(--ink); margin: 40px 0 18px; }
+.gap-block { display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; margin: 34px 0; padding: 26px 24px; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 8px 24px rgba(30,43,37,.05); font-size: clamp(16.5px,1.9vw,20px); line-height: 1.6; color: var(--ink-soft); }
+.gap-block strong { color: var(--ink); font-weight: 800; }
+.gap-vs { font-size: 12px; letter-spacing: .2em; font-weight: 700; color: var(--pine); }
+.gap-hero { font-size: clamp(19px,2.7vw,27px); font-weight: 900; color: var(--pine-deep); background: linear-gradient(120deg, rgba(var(--sage-rgb),.5), rgba(var(--sage-rgb),.22)); border: 1px solid rgba(var(--pine-rgb),.25); border-radius: 16px; padding: 14px 26px; line-height: 1.5; animation: gap-pulse 2.8s ease-in-out infinite; box-shadow: 0 8px 24px rgba(var(--pine-rgb),.14); }
+@keyframes gap-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.025)} }
+/* מ"אין לי מושג" ← ל"השקעתי" - ממורכז */
+.how .section-label, .how h2 { text-align: center; }
+.how .how-intro { text-align: center; margin-left: auto; margin-right: auto; }
+.steps-path { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-weight: 900; font-size: clamp(19px,2.5vw,30px); color: var(--ink); margin: 2px 0 18px; }
+.steps-chip { display: inline-block; padding: 4px 18px; border-radius: 100px; white-space: nowrap; }
+.chip-from { background: rgba(30,43,37,.08); color: var(--ink-soft); }
+.chip-to { background: linear-gradient(120deg, var(--pine-deep), var(--pine)); color: #fff; box-shadow: 0 8px 24px rgba(var(--pine-rgb),.4); }
+.arrow-anim { display: inline-block; color: var(--pine); font-weight: 900; animation: arrow-slide 1.4s ease-in-out infinite; }
+@keyframes arrow-slide { 0%,100%{transform:translateX(0);opacity:.45} 50%{transform:translateX(-9px);opacity:1} }
+@media (max-width: 880px) {
+ .steps-path { flex-direction: column; align-items: center; gap: 8px; font-size: 21px; }
+ .arrow-anim { animation-name: arrow-slide-down; }
+ @keyframes arrow-slide-down { 0%,100%{transform:rotate(-90deg) translateX(0);opacity:.45} 50%{transform:rotate(-90deg) translateX(-8px);opacity:1} }
+}
+.fear-lead { font-weight: 900; font-size: clamp(24px,3vw,34px); color: var(--red); margin: 38px 0 16px; }
+.fear-lead em { font-style: normal; }
+.pull-quote { position: relative; margin: 52px auto 48px; max-width: 660px; padding: 0 12px; text-align: center; font-size: clamp(14px,1.5vw,15.5px); color: var(--ink-soft); letter-spacing: .01em; }
+.pull-quote::before { content: '"'; position: absolute; top: -46px; left: 50%; transform: translateX(-50%); font-size: 90px; line-height: 1; color: rgba(var(--pine-rgb),.16); font-weight: 900; pointer-events: none; }
+.pull-quote .pq-big { display: block; margin-top: 12px; font-size: clamp(21px,2.9vw,32px); font-weight: 800; color: var(--pine-deep); line-height: 1.55; letter-spacing: -.01em; }
+.pull-quote::after { content: ''; display: block; width: 54px; height: 2px; margin: 26px auto 0; background: linear-gradient(90deg, transparent, rgba(var(--pine-rgb),.55), transparent); }
+.fear-lead.want { color: var(--pine-deep); }       /* "רצון" זה חיובי - ירוק, לא טרקוטה */
+.fear-lead.second { margin-top: 52px; }
+/* ===== פס 3 המספרים (מה כולל הקורס) ===== */
+.mini-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 0 0 44px; }
+.ms-item { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 14px; text-align: center; box-shadow: 0 6px 18px rgba(30,43,37,.05); transition: all .3s; }
+.ms-item:hover { border-color: rgba(var(--pine-rgb),.4); transform: translateY(-3px); }
+.ms-num { font-weight: 900; font-size: clamp(38px,4.8vw,54px); line-height: 1; color: var(--pine-deep); }
+.ms-suffix { font-size: .45em; font-weight: 500; color: var(--pine); vertical-align: super; }
+.ms-label { color: var(--ink-soft); font-size: 14px; margin-top: 8px; letter-spacing: .02em; }
+
+/* ===== OUTCOMES ===== */
+.does-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+.does-card { padding: 32px 28px; background: #fff; border: 1px solid var(--line); border-radius: 20px; transition: all .35s; box-shadow: 0 5px 18px rgba(30,43,37,.05); position: relative; overflow: hidden; }
+.does-card:hover { border-color: rgba(var(--pine-rgb),.4); transform: translateY(-4px); box-shadow: 0 22px 46px rgba(62,84,72,.13); }
+.does-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pine-deep), var(--sage)); opacity: 0; transition: opacity .35s; }
+.does-card:hover::before { opacity: 1; }
+.does-emoji { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(135deg, rgba(var(--pine-rgb),.13), rgba(var(--sage-rgb),.3)); border: 1px solid rgba(var(--pine-rgb),.2); font-size: 23px; margin-bottom: 16px; }
+.does-h3 { font-weight: 800; font-size: 18.5px; color: var(--ink); margin-bottom: 9px; }
+.does-text { font-size: clamp(14.5px,1.5vw,16px); line-height: 1.68; color: var(--ink-soft); }
+
+/* ===== SOCIAL PROOF ===== */
+.wa-proof { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: center; }
+.wa-frame { background: #fff; border-radius: 26px; padding: 16px; box-shadow: 0 30px 70px rgba(62,84,72,.18); border: 1px solid var(--line); transform: rotate(1.2deg); transition: transform .4s; max-width: 420px; justify-self: center; }
+.wa-frame:hover { transform: rotate(0deg) scale(1.02); }
+.wa-frame img { display: block; width: 100%; height: auto; border-radius: 16px; }
+.wa-caption { font-size: 12.5px; color: var(--ink-soft); text-align: center; padding: 12px 6px 4px; letter-spacing: .04em; }
+.wa-side h2 { font-weight: 900; font-size: clamp(26px,3.4vw,44px); line-height: 1.15; color: var(--ink); margin-bottom: 18px; }
+.wa-side h2 .orange { color: var(--pine); }
+.wa-side p { font-size: clamp(16px,1.8vw,19px); line-height: 1.8; color: var(--ink-soft); margin-bottom: 16px; }
+.wa-side p strong { color: var(--ink); }
+
+/* ===== BONUSES - כהה ===== */
+.bonuses { position: relative; z-index: 2; background: linear-gradient(160deg, var(--pine-deep) 0%, var(--pine-darker) 80%); overflow: hidden; }
+.bonuses::before { content: ''; position: absolute; top: -180px; right: -120px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(ellipse, rgba(var(--sage-rgb),.18), transparent 62%); filter: blur(55px); pointer-events: none; }
+.bonuses-wrap { max-width: 1200px; margin: 0 auto; padding: 104px 48px; position: relative; }
+.bonuses .section-label { color: var(--sage); }
+.bonuses h2 { font-weight: 900; font-size: clamp(28px,3.7vw,48px); line-height: 1.14; letter-spacing: -.025em; color: #fff; margin-bottom: 16px; }
+.bonuses h2 .gold { background: linear-gradient(120deg, var(--sage), #dcebde); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.bonuses .how-intro { color: var(--on-dark-soft); }
+.bonus-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.bonus-card { padding: 38px 28px 32px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.13); border-radius: 22px; position: relative; overflow: hidden; transition: all .35s; backdrop-filter: blur(8px); }
+.bonus-card:hover { border-color: rgba(var(--sage-rgb),.55); background: rgba(255,255,255,.09); transform: translateY(-5px); box-shadow: 0 26px 50px rgba(0,0,0,.28); }
+.bonus-card .b-tag { display: inline-block; font-size: 10px; letter-spacing: .18em; font-weight: 700; color: var(--sage); margin-bottom: 14px; }
+.bonus-card .b-h3 { font-weight: 800; font-size: 21px; color: #fff; margin-bottom: 11px; line-height: 1.3; }
+.bonus-card .b-text { font-size: 15px; line-height: 1.7; color: var(--on-dark-soft); }
+.bonus-card .stage-emoji { font-size: 30px; margin-bottom: 12px; display: block; }
+
+/* ===== INCLUDED + FIT ===== */
+.mockup-wrap { text-align: center; margin: 6px 0 44px; }
+.mockup-wrap img { max-width: min(760px, 100%); height: auto; filter: drop-shadow(0 30px 44px rgba(62,84,72,.22)); animation: hero-float 8s ease-in-out infinite; }
+.inc-list { list-style: none; display: grid; grid-template-columns: repeat(2,1fr); gap: 13px; margin: 6px 0 52px; }
+.inc-list li { display: flex; align-items: center; gap: 13px; font-size: clamp(15px,1.6vw,17px); font-weight: 600; color: var(--ink); padding: 17px 21px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 4px 14px rgba(30,43,37,.04); transition: all .3s; }
+.inc-list li:hover { border-color: rgba(var(--pine-rgb),.4); transform: translateY(-2px); }
+.inc-check { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, var(--pine-deep), var(--pine)); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; }
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 8px; }
+.fit-col { padding: 36px 34px 38px; border-radius: 22px; }
+.fit-col.yes { background: linear-gradient(135deg, rgba(var(--pine-rgb),.1), rgba(var(--sage-rgb),.2)); border: 1px solid rgba(var(--pine-rgb),.32); }
+.fit-col.no { background: rgba(var(--red-rgb),.05); border: 1px solid rgba(var(--red-rgb),.22); }
+.fit-h3 { font-weight: 900; font-size: 21px; margin-bottom: 20px; }
+.fit-h3.yes { color: var(--pine-deep); }
+.fit-h3.no { color: var(--red); }
+.fit-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+.fit-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.6; }
+.fit-list.yes li { color: var(--ink); }
+.fit-list.no li { color: rgba(30,43,37,.55); }
+.fit-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin-top: 2px; }
+.fit-icon.yes { background: var(--pine); color: #fff; }
+.fit-icon.no { background: rgba(var(--red-rgb),.14); color: var(--red); }
+
+/* ===== OBJECTION ===== */
+.objection { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 96px 48px; text-align: center; }
+.objection h2 { font-weight: 900; font-size: clamp(23px,2.9vw,36px); line-height: 1.3; color: var(--ink); margin-bottom: 30px; font-style: italic; }
+.obj-line { font-size: clamp(16.5px,1.85vw,19.5px); line-height: 1.7; color: var(--ink-soft); margin-bottom: 14px; }
+.obj-line strong { color: var(--ink); font-weight: 800; }
+.obj-big { font-size: clamp(21px,2.5vw,28px); font-weight: 900; color: var(--ink); line-height: 1.45; margin: 22px 0; }
+.obj-big .neg { color: var(--red-ink); }
+.obj-big .pos { color: var(--pine-deep); }
+
+/* ===== OFFER + FORM ===== */
+.offer { position: relative; z-index: 2; background: linear-gradient(165deg, var(--pine-deep) 0%, var(--pine-darker) 70%); padding: 110px 32px; overflow: hidden; }
+.offer::before { content: ''; position: absolute; top: -140px; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(var(--sage-rgb),.16), transparent 65%); filter: blur(55px); pointer-events: none; }
+.offer-inner { position: relative; max-width: 620px; margin: 0 auto; text-align: center; }
+.offer .section-label { color: var(--sage); }
+.offer h2 { font-weight: 900; font-size: clamp(28px,4vw,50px); line-height: 1.14; letter-spacing: -.025em; color: #fff; margin-bottom: 16px; }
+.offer h2 .gold { background: linear-gradient(120deg, var(--sage), #dcebde); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.offer-lead { font-size: clamp(16px,1.8vw,19px); color: var(--on-dark-soft); line-height: 1.72; margin-bottom: 36px; }
+.offer-lead strong { color: #fff; }
+.offer-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 26px; padding: 42px 38px; backdrop-filter: blur(16px); box-shadow: 0 34px 90px rgba(0,0,0,.35); text-align: right; }
+.price-row { text-align: center; margin-bottom: 6px; }
+.price-num { font-weight: 900; font-size: clamp(56px,7.6vw,82px); line-height: 1; letter-spacing: -.04em; color: #fff; }
+.price-note { text-align: center; font-size: 14px; color: var(--on-dark-soft); letter-spacing: .04em; margin-bottom: 28px; }
+.lead-form { display: flex; flex-direction: column; gap: 13px; }
+.lead-form input[type=text], .lead-form input[type=email], .lead-form input[type=tel] { width: 100%; font-family: var(--font); font-size: 16px; padding: 16px 18px; border-radius: 12px; background: #fff; border: 1px solid rgba(255,255,255,.4); color: var(--ink); transition: box-shadow .25s; }
+.lead-form input::placeholder { color: rgba(30,43,37,.42); }
+.lead-form input:focus { outline: none; box-shadow: 0 0 0 3px rgba(var(--sage-rgb),.6); }
+.consent { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; line-height: 1.5; color: var(--on-dark-soft); margin-top: 4px; }
+.consent input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--sage); flex-shrink: 0; }
+.consent a { color: var(--sage); }
+.form-submit { margin-top: 10px; width: 100%; border: none; cursor: pointer; background: linear-gradient(120deg, #ffffff 0%, var(--sage-tint) 100%); color: var(--pine-darker); font-family: var(--font); font-weight: 900; font-size: 18px; padding: 20px; border-radius: 14px; letter-spacing: .01em; box-shadow: 0 12px 40px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.8); transition: transform .2s, box-shadow .25s; position: relative; overflow: hidden; }
+.form-submit::after { content: ''; position: absolute; top: 0; bottom: 0; left: -50%; width: 35%; background: linear-gradient(120deg, transparent 0%, rgba(var(--pine-rgb),.18) 50%, transparent 100%); transform: skewX(-22deg); animation: shimmer-sweep 3.6s ease-in-out infinite; }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 18px 52px rgba(0,0,0,.4); }
+.offer-reassure { margin-top: 22px; font-size: 13.5px; color: var(--on-dark-soft); }
+
+/* ===== ABOUT / BIO ===== */
+.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; margin-top: 8px; }
+.about-photo-card { border-radius: 24px; overflow: hidden; border: 6px solid #fff; box-shadow: 0 28px 64px rgba(62,84,72,.22); transform: rotate(1.5deg); transition: transform .4s; position: sticky; top: 96px; }
+.about-photo-card:hover { transform: rotate(0deg) scale(1.02); }
+.about-photo-card img { display: block; width: 100%; height: auto; }
+.about-text p { font-size: clamp(16px,1.7vw,18px); line-height: 1.8; color: var(--ink-soft); margin-bottom: 17px; }
+.about-text p strong { color: var(--ink); font-weight: 700; }
+.about-sign { font-weight: 900; font-size: 22px; color: var(--pine-deep); margin-top: 4px; }
+.about-collages { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 46px; }
+.collage-card { background: #fff; border-radius: 20px; padding: 12px 12px 6px; box-shadow: 0 18px 44px rgba(62,84,72,.14); border: 1px solid var(--line); transition: all .35s; }
+.collage-card:hover { transform: translateY(-5px) rotate(-.5deg); box-shadow: 0 30px 60px rgba(62,84,72,.22); }
+.collage-card img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.collage-caption { font-size: 13.5px; font-weight: 600; color: var(--ink-soft); text-align: center; padding: 11px 6px; }
+
+/* ===== FAQ ===== */
+.faq-wrap { max-width: 860px; margin: 8px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .3s, box-shadow .3s; }
+.faq-item[open] { border-color: rgba(var(--pine-rgb),.45); box-shadow: 0 14px 34px rgba(62,84,72,.1); }
+.faq-item summary { cursor: pointer; list-style: none; padding: 23px 27px; font-weight: 700; font-size: clamp(16px,1.7vw,18px); color: var(--ink); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-q-icon { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: rgba(var(--pine-rgb),.12); color: var(--pine-deep); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; transition: transform .3s; }
+.faq-item[open] .faq-q-icon { transform: rotate(45deg); }
+.faq-a { padding: 0 27px 25px; font-size: clamp(15px,1.6vw,17px); line-height: 1.75; color: var(--ink-soft); }
+
+/* ===== FOOTER ===== */
+.site-footer { position: relative; z-index: 2; background: var(--pine-darker); border-top: 1px solid rgba(255,255,255,.08); padding: 52px 48px; text-align: center; }
+.footer-mark { font-weight: 900; font-size: 22px; letter-spacing: .06em; color: #fff; margin-bottom: 10px; display: inline-block; }
+.footer-meta { font-size: 12px; letter-spacing: .1em; color: rgba(238,244,239,.78); font-weight: 300; line-height: 1.7; }   /* היה .55 = 4.22:1, נכשל בגודל 12px */
+
+/* ===== CURSOR GLOW ===== */
+#cursor-glow { position: fixed; pointer-events: none; z-index: 50; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(var(--sage-rgb),.24) 0%, rgba(var(--pine-rgb),.1) 40%, transparent 70%); filter: blur(46px); transform: translate(-50%, -50%); opacity: 0; transition: opacity .45s ease; }
+#cursor-glow.visible { opacity: 1; }
+
+/* ===== FADEUP ===== */
+.fadeup-ready { opacity: 0; transform: translateY(28px); }
+.fadeup-ready.fadeup-done { animation: fadeup-in .6s cubic-bezier(.22,.68,0,1.2) both; }
+@keyframes fadeup-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+/* הכפתור הקבוע - צף למטה בכל המכשירים (הכפתור היחיד עד סקשן המחיר) */
+.sticky-cta { position: fixed; bottom: 16px; left: 0; right: 0; z-index: 95; padding: 0 16px; text-align: center; pointer-events: none; }
+.sticky-cta a { pointer-events: auto; display: inline-block; width: min(420px, 100%); text-align: center; background: linear-gradient(120deg, var(--pine-deep), var(--pine)); color: #fff; font-weight: 800; font-size: 16.5px; padding: 17px 24px; border-radius: 100px; text-decoration: none; box-shadow: 0 14px 40px rgba(47,64,54,.45), inset 0 1px 0 rgba(255,255,255,.2); position: relative; overflow: hidden; transition: transform .2s, box-shadow .25s; }
+.sticky-cta a::after { content: ''; position: absolute; top: 0; bottom: 0; left: -50%; width: 35%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.3) 50%, transparent 100%); transform: skewX(-22deg); animation: shimmer-sweep 3.6s ease-in-out infinite; }
+.sticky-cta a:hover { transform: translateY(-2px); box-shadow: 0 18px 50px rgba(47,64,54,.55); }
+body { padding-bottom: 92px; }
+
+/* ===== מובייל ===== */
+@media (max-width: 880px) {
+ .hero { padding-top: 42px; }
+ .hero-visual { max-width: 400px; margin-top: 36px; width: 100%; }
+ .bli-chips { gap: 7px; }
+ .bli-row { gap: 7px; }
+ .bli-chip { font-size: 12px; padding: 7px 13px; gap: 6px; }
+ .bli-chip-x { width: 14px; height: 14px; font-size: 8px; }
+ .does-grid, .inc-list, .fit-grid, .bonus-grid { grid-template-columns: 1fr; }
+ .wa-proof { grid-template-columns: 1fr; gap: 32px; }
+ .about-grid { grid-template-columns: 1fr; gap: 28px; }
+ .about-photo-card { max-width: 320px; margin: 0 auto; position: static; }
+ .about-collages { grid-template-columns: 1fr; }
+ .light-wrap, .story, .how, .bonuses-wrap, .objection { padding-left: 22px; padding-right: 22px; }
+ .journey { padding-right: 48px; }
+ .journey-track { right: 16px; }
+ .j-node { right: -48px; width: 38px; height: 38px; font-size: 13px; }
+ .offer-card { padding: 32px 22px; }
+ .sc-out, .sc-in { padding: 16px 30px 16px 18px; font-size: 14px; }
+ .sticky-cta { bottom: calc(10px + env(safe-area-inset-bottom)); }
+}
+/* ===== מקומות שמורים לתמונות אמיתיות (יוחלפו בצילומים של טלי) ===== */
+.mockup-card { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; overflow: visible !important; border-radius: 0 !important; min-height: 0 !important; }
+.mockup-card img { width: 100%; display: block; filter: drop-shadow(0 26px 48px rgba(30,60,45,.18)); }
+.photo-slot { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, rgba(var(--pine-rgb),.05) 0 14px, rgba(var(--pine-rgb),.09) 14px 28px); border: 2px dashed rgba(var(--pine-rgb),.42); border-radius: 22px; min-height: 260px; }
+.photo-slot.tall { min-height: 340px; }
+.photo-slot.wide { min-height: 220px; }
+.photo-slot .ps-inner { display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; padding: 26px; }
+.photo-slot .ps-emoji { font-size: 34px; }
+.photo-slot .ps-title { font-weight: 800; font-size: 16px; color: var(--pine-deep); }
+.photo-slot .ps-note { font-size: 13px; color: var(--ink-soft); max-width: 260px; line-height: 1.6; }
+
+/* ===== שגיאות ולידציה בטופס ===== */
+.lead-form .ferr { display: none; width: 100%; text-align: right; font-size: 13px; font-weight: 600; color: #ffb4a2; margin: -4px 2px 2px; }
+.lead-form .ferr.show { display: block; }
+/* כפתור התשלום כבוי עד שהטופס תקין - חייב להיראות כבוי, לא שבור */
+.lead-form .form-submit:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; transform: none; }
+.lead-form .form-hint { width: 100%; text-align: center; font-size: 12.5px; color: rgba(238,244,239,.6); margin-top: 9px; }
+
+/* ===== הצ'ק-ליסט כרכיב במה (בתוך הסקשן הכהה של הכלים) ===== */
+.checklist-feature { margin-top: 34px; max-width: 720px; margin-inline: auto; background: rgba(238,244,239,.07); border: 1px solid rgba(238,244,239,.16); border-radius: 22px; padding: 30px; text-align: center; }
+.checklist-feature .cf-emoji { font-size: 34px; display: block; margin-bottom: 12px; }
+.checklist-feature .cf-tag { display: inline-block; font-size: 11px; letter-spacing: .16em; font-weight: 700; color: var(--sage); margin-bottom: 10px; }
+.checklist-feature .cf-h3 { font-size: clamp(21px, 2.4vw, 27px); font-weight: 900; color: #fff; margin-bottom: 12px; line-height: 1.3; }
+.checklist-feature .cf-text { font-size: 15.5px; line-height: 1.75; color: rgba(238,244,239,.86); }
+.checklist-feature .cf-text strong { color: #fff; }
+.checklist-feature .cf-group { font-size: 12.5px; font-weight: 800; letter-spacing: .04em; color: var(--sage); margin: 16px 0 8px; }
+.checklist-feature .cf-group:first-child { margin-top: 0; }
+.checklist-feature .cf-item { position: relative; padding: 9px 30px 9px 12px; font-size: 14.5px; line-height: 1.6; color: rgba(238,244,239,.92); border-bottom: 1px solid rgba(238,244,239,.09); }
+.checklist-feature .cf-item::before { content: "✓"; position: absolute; right: 6px; top: 9px; color: var(--sage); font-weight: 900; font-size: 14px; }
+.checklist-feature .cf-more { margin-top: 14px; font-size: 13.5px; font-style: italic; color: rgba(238,244,239,.68); }
+@media (max-width: 880px) { .checklist-feature { grid-template-columns: 1fr; padding: 24px 20px; gap: 18px; } }
+
+/* ===== קופסת המספר הגדול (100-200 אלף) - נלקחה מגרסה 1 לבקשת טלי, בתוך תחנה 5 במסע ===== */
+.valuebox { margin: 26px 0 4px; padding: 26px 24px; border-radius: 18px; background: linear-gradient(135deg, var(--pine-darker) 0%, var(--pine-deep) 100%); color: var(--on-dark); text-align: center; box-shadow: 0 16px 42px rgba(47,64,54,.28); }
+.valuebox p { font-size: 14.5px; line-height: 1.65; color: rgba(238,244,239,.82); margin: 0; }
+.valuebox .vb-num { font-size: clamp(30px, 5vw, 46px); font-weight: 900; letter-spacing: -.02em; margin: 10px 0 12px; color: #fff; direction: ltr; }
+.valuebox .vb-num .cur { font-size: .62em; margin-inline-start: 6px; font-weight: 800; }
+/* טרקוטה כטקסט על רקע בהיר: #c1553f נותן 3.95:1 ונופל בתקן. הגוון הכהה יותר עובר AA (5.1:1)
+   ונשאר אותו אדום מותגי. הצורה העגולה/האייקונים ממשיכים ב-#c1553f המקורי. */
+</style>
+<body>
+
+<div id="cursor-glow"></div>
+<div id="scroll-progress"></div>
+
+<!-- ===== SCENE ===== -->
+<div class="scene">
+ <div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div>
+ <div class="scene-ring"></div>
+ <div class="scene-grid"></div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+ <div style="width:100%">
+ <div class="hero-hook">
+  <div class="hero-hook-inner">
+   אם אתם כבר מדברים על תינוק, ובראש רץ <span class="hh-quote">"אבל איך נעמוד בזה כלכלית?"</span>
+   <span class="hh-tail">אתם בדיוק במקום הנכון.</span>
+  </div>
+ </div>
+ <div class="hero-grid">
+  <div class="hero-copy">
+   <h1 class="hero-h1">
+    <span class="h1-warm">מוכנים כלכלית ללידה</span>
+   </h1>
+
+   <p class="sub-promise" id="sub-promise-el">קורס דיגיטלי שמראה לכם <strong>מה לעשות בכל שלב</strong>,<br>
+לפני, במהלך ואחרי ההיריון,<br>
+כדי לוודא שאתם לא מפספסים שום צעד <strong>שעולה עשרות אלפי שקלים</strong>,<br>
+כדי להתכונן לחופשת לידה ארוכה,<br>
+<span class="warm">כדי שתוכלו לבחור כמה זמן להישאר בבית עם התינוק/ת</span></p>
+
+   
+
+   <div class="hero-visual">
+    <div class="hero-img-card photo-slot">
+     <div class="ps-inner">
+      <span class="ps-emoji">📷</span>
+      <span class="ps-title">מקום לתמונה שלכם</span>
+      <span class="ps-note">צילום היריון או צילום משפחתי ייכנס לכאן</span>
+     </div>
+    </div>
+    <div class="hero-badge">🎓 קורס דיגיטלי · בקצב שלכם</div>
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===== STORY / PROBLEM ===== -->
+<section class="story" id="story-section">
+ <div class="section-label">// הרגע שאתם בו</div>
+ <h2>החלטתם להרחיב את המשפחה, ומתחילות <span class="gold">לצוץ השאלות.</span></h2>
+
+ <p>או שאולי כבר גיליתם שהמסע התחיל.<br>ולצד ההתרגשות והחלומות, מתחילות לצוץ שאלות שקשה לשאול בקול רם:<br><strong>"האם אנחנו באמת מוכנים לזה כלכלית?"</strong></p>
+
+ <p>כי ילד זה דבר מדהים ומשמח, אבל במקביל זו <strong>התחייבות של שנים</strong>,<br>והוצאה שמגיעה למעל <strong>מיליון שקל עד גיל 18</strong>.<br>וסורי, אבל אתם יודעים ש<em>אהבה לא תחליף מטרנה, גן ילדים תקין וצרכים בסיסיים</em>.</p>
+
+ <div class="pull-quote">ומחשבה נוספת שרצה בעיקר בראש של האישה:<br>
+  <span class="pq-big">"איך אני אשלח את התינוקת שלי אחרי 3 חודשים למעון?<br>היא צריכה את אמא שלה."</span></div>
+
+ <p>אבל המדינה נותנת רק <strong>15 שבועות בתשלום</strong>,<br>ובתוך תוככם אתם כבר מרגישים שזה פשוט לא מספיק.</p>
+
+ <p><span class="neg">רוב ההורים מגלים שהם לא באמת מוכנים כלכלית, ומגלים את זה רק תוך כדי.</span><br>ואז מתחיל הלחץ סביב הכסף.<br>אתם רוצים להשקיע בהתפתחות שלו/ה, מסתכלים על חשבון הבנק, ומבינים <span class="neg">שאין מאיפה.</span></p>
+
+ <p>ומסביבכם יש את אלה שקונים הכל חדש מהניילון בלי להתלבט,<br>ואת אלה שבקושי סוגרים את החודש ומספרים שחופשת הלידה פשוט לא מספיקה.</p>
+
+ <h3 class="sub">ואז יש את החברה ההיא.</h3>
+ <p>זאת שיכולה להרשות לעצמה להישאר <strong>שנה שלמה בבית</strong> עם התינוק, ברוגע, בלי חרדה כלכלית לרגע.<br>ואתם מסתכלים עליה ולא מבינים, איך היא עושה את זה?<br>הרי היא לא מרוויחה הרבה יותר מכם, אתם מרוויחים פחות או יותר אותו דבר.</p>
+
+ <div class="gap-block">
+  <div>וההבדל בינה לביניכם הוא לא כמה היא מרוויחה. ההבדל הוא בין</div>
+  <div><strong>להגיע ללידה ולקוות שיהיה מספיק כסף 🤞</strong></div>
+  <div class="gap-vs">לבין</div>
+  <div class="gap-hero">להגיע ללידה מוכנים כלכלית, ולהחליט בעצמכם כמה זמן אתם נשארים בחופשת לידה בלי לחץ של כסף 🤍</div>
+ </div>
+
+ <div class="fear-lead want">ובאמת, מה שיש כאן זה בעיקר <em>רצון</em>.</div>
+ <ul class="story-list">
+  <li class="fadeup-ready" style="--delay:0s"><span class="li-icon">🤍</span><span>רצון להישאר עם התינוק/ת <strong>יותר משלושה חודשים</strong>, ולא לשלוח למעון כי נגמר הכסף וחייבים לחזור.</span></li>
+  <li class="fadeup-ready" style="--delay:.08s"><span class="li-icon">🌿</span><span>רצון להגיע ללידה <strong>רגועים ויציבים כלכלית</strong>, ולדעת שאפשר להשקיע בו/ה בלי לספור. כי כשמשפחה בלחץ כלכלי, הלחץ הזה עובר גם אליו/ה.</span></li>
+  <li class="fadeup-ready" style="--delay:.16s"><span class="li-icon">✅</span><span>רצון לדעת שלא פספסתם כלום, ושאתם <strong>מנצלים את כל מה שמגיע לכם</strong>.</span></li>
+  <li class="fadeup-ready" style="--delay:.24s"><span class="li-icon">🚀</span><span>רצון לדאוג לעתיד שלו/ה כבר עכשיו, ולתת לו/ה <strong>בוסט לתחילת החיים</strong>.</span></li>
+  <li class="fadeup-ready" style="--delay:.32s"><span class="li-icon">🌱</span><span>ורצון להסתכל אחורה בעוד 20 שנה ולדעת <strong>שבניתם לו/ה התחלה</strong>, ושאתם יכולים לעזור.</span></li>
+ </ul>
+
+ <div class="fear-lead second">ולצד הרצון, יש דברים שפשוט <em>לא יודעים</em>.</div>
+ <ul class="story-list">
+  <li class="fadeup-ready" style="--delay:0s"><span class="li-icon">🚪</span><span>שיש פעולות שאפשר לעשות <strong>רק לפני</strong> ההיריון. אחרי שני הקווים, החלון הזה כבר סגור.</span></li>
+  <li class="fadeup-ready" style="--delay:.08s"><span class="li-icon">🧾</span><span>שיש זכויות והחזרים שרוב ההורים לא יודעים בכלל שקיימים, ולכן גם לא מבקשים אותם.</span></li>
+  <li class="fadeup-ready" style="--delay:.16s"><span class="li-icon">🧮</span><span>שאחרי הלידה <strong>מגיע לכם כסף מהמדינה בחזרה</strong>, רק צריך לדעת איך לבקש אותו.</span></li>
+  <li class="fadeup-ready" style="--delay:.24s"><span class="li-icon">👶</span><span>ושיש ביטוח שמגיע לתינוק/ת <strong>בחינם</strong>, ורוב ההורים לא מצרפים אליו.</span></li>
+  <li class="fadeup-ready" style="--delay:.32s"><span class="li-icon">💸</span><span>ואת רובם <span class="neg">מגלים רק בדיעבד</span>, בדיוק כשזה כבר עולה כסף.</span></li>
+ </ul>
+</section>
+
+<!-- ===== חץ הזמנה ===== -->
+<div class="scroll-invite">
+ <div class="si-text">בדיוק בשביל זה נבנה הקורס</div>
+ <a href="#solution" aria-label="להמשיך לקרוא">⌄</a>
+</div>
+
+<!-- ===== SOLUTION ===== -->
+<section class="light-section alt" id="solution">
+ <div class="light-wrap">
+  <div class="light-eyebrow">// הפתרון</div>
+  <h2 class="light-h2"><span class="orange">מוכנים כלכלית ללידה</span></h2>
+
+  <div class="solution-card">
+   <p>קורס שמראה לכם <span class="pos">מה לעשות בכל שלב</span>,<br>לפני, במהלך ואחרי ההיריון,<br>כדי שתוכלו לבחור <span class="pos">כמה זמן להישאר איתה בבית</span>.</p>
+  </div>
+
+  <p class="solution-tail"><strong>וזה עובד גם אם אתם רק מדברים על זה, וגם אם כבר בטרימסטר שני.</strong><br>המטרה שלי פשוטה: שכל אמא תוכל לבחור להישאר בבית עוד קצת, <span class="pos">בלי שהבנק יחליט בשבילה</span>.</p>
+ </div>
+</section>
+
+<!-- ===== המסע (נשמר מהדף המקורי) ===== -->
+<section class="how" id="how">
+ <div class="section-label">// המסע שנעשה יחד</div>
+ <h2>אני מלווה אתכם בכל שלב.</h2>
+ <div class="steps-path">
+  <span class="sp-item">מ<span class="steps-chip chip-from">לפני ההיריון</span></span>
+  <span class="arrow-anim">←</span>
+  <span class="sp-item">עד ש<span class="steps-chip chip-to">התינוק/ת בחוץ</span></span>
+ </div>
+ <p class="how-intro">מהרגע שחושבים על תינוק ועד השנה הראשונה. בכל תחנה יש פעולה אחת שמכניסה לכם כסף לקרן, או שומרת עליו שם. ככל שגוללים - המסע נפתח.</p>
+
+ <div class="journey" id="journey">
+  <div class="journey-track" id="journey-track"><div class="journey-fill" id="journey-fill"></div></div>
+
+  <div class="j-step">
+   <div class="j-node">1</div>
+   <div class="j-card">
+    <span class="j-emoji">💬</span><span class="j-tag">לפני הכל</span>
+    <div class="j-h3">שפה זוגית סביב כסף</div>
+    <div class="j-text">לפני שמדברים על מספרים, צריך שיהיה אפשר לדבר בכלל.</div>
+    <ul class="j-points">
+     <li>איך פותחים שיחה על כסף בלי שזה יהפוך לוויכוח?</li>
+     <li>למה אנחנו רבים על כסף, כשזה בכלל לא על הכסף?</li>
+     <li>ומה עושים כשבן/בת הזוג שלי הפוך/ה ממני לגמרי בכסף?</li>
+     <li>מי מאיתנו אחראי על מה, כדי שלא הכל ייפול על אחד?</li>
+     <li>וכמה בעצם נכנס אצלנו, כמה יוצא, ומה כבר יש לנו היום?</li>
+    </ul>
+    <div class="j-goal"><span class="g-label">המטרה היא ש:</span>
+     <p>תהיה לכם שפה משותפת סביב כסף, ותוכלו לקבל את ההחלטות הגדולות יחד במקום כל אחד לחוד.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="j-step">
+   <div class="j-node">2</div>
+   <div class="j-card">
+    <span class="j-emoji">⏳</span><span class="j-tag">לפני היריון</span>
+    <div class="j-h3">הפעולות שחייבות לקרות לפני ההיריון, כי אחר כך אין דרך חזרה</div>
+    <div class="j-text">זה השלב <strong>שאי אפשר לעשות ממנו קאמבק</strong>.<br>
+אם לא עשיתם את הדברים האלה לפני שני הקווים, <strong>אי אפשר לתקן אחורה</strong>.<br>
+מי שנמצא כאן עכשיו, נמצא במקום הכי טוב שיש.</div>
+    <ul class="j-points">
+     <li>מה כדאי לסדר עכשיו, כל עוד אנחנו לפני, כדי לא להפסיד כסף אחר כך?</li>
+     <li>מתי צריך לשדרג את הביטוח של הקופה, ולמה דווקא חצי שנה מראש?</li>
+     <li>אני עומדת בתנאים כדי לקבל דמי לידה מלאים? ומה עלול לפגוע בזה?</li>
+     <li>אילו בדיקות שווה לעשות עוד לפני, וכמה זה חוסך לנו?</li>
+    </ul>
+    <div class="j-goal"><span class="g-label">המטרה היא ש:</span>
+     <p>לא תגלו בדיעבד שהפסדתם אלפי שקלים רק כי פעלתם חודש מאוחר מדי.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="j-step">
+   <div class="j-node">3</div>
+   <div class="j-card">
+    <span class="j-emoji">🍼</span><span class="j-tag">לקראת הלידה</span>
+    <div class="j-h3">איך להאריך את חופשת הלידה שלך, ולוודא שהיא לא נגמרת אחרי שלושה חודשים</div>
+    <div class="j-text">זה הלב של הקורס. המדינה משלמת 15 שבועות, ואת רוצה יותר. אז כאן אנחנו מחליטים כמה חודשים את נשארת בבית, ובונים בדיוק את הכסף שיאפשר לך את זה, כדי שהחופשה תיגמר כשאת מחליטה ולא כשהכסף נגמר.</div>
+    <ul class="j-points">
+     <li>כמה כסף באמת ייכנס לי בחופשת הלידה? <strong>המספר שלי, לא ממוצע של מישהי אחרת</strong></li>
+     <li>כמה חודשים אני יכולה להישאר בבית, וכמה עולה לי כל חודש נוסף?</li>
+     <li><strong>וכמה צריך להתחיל לחסוך כל חודש מהיום</strong> כדי להגיע לשם?</li>
+     <li>איפה שמים את הכסף הזה, שלא ייגמר בדרך בלי ששמנו לב?</li>
+     <li>ומה קורה להכנסה שלי אם ישלחו אותי לשמירת היריון באמצע?</li>
+    </ul>
+    <div class="j-goal"><span class="g-label">המטרה היא ש:</span>
+     <p>במקום לקוות שנסתדר, יהיה לכם סכום שמחכה בצד, ואתם אלה שתחליטו כמה זמן היא נשארת אתכם בבית.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="j-step">
+   <div class="j-node">4</div>
+   <div class="j-card">
+    <span class="j-emoji">🧾</span><span class="j-tag">בתוך ההיריון</span>
+    <div class="j-h3">ממקסמים כל שקל שמגיע לכם מהקופות והביטוחים</div>
+    <div class="j-text">עכשיו מתחילות ההוצאות הגדולות, ובמקביל יש כסף שאפשר להחזיר לחשבון. כל שקל שחוזר הוא שקל שנשאר בקרן, ומאריך לך את הזמן בבית.</div>
+    <ul class="j-points">
+     <li>כמה כסף מגיע לי בחזרה על הבדיקות, וממי לבקש קודם, מהקופה או מהביטוח?</li>
+     <li>אילו זכויות מגיעות לי בעבודה עכשיו, כשאני בהיריון?</li>
+     <li>מה תינוק/ת באמת צריך/ה, ועל מה פשוט חבל להוציא?</li>
+     <li>ואיך קונים לו/ה את מה שרצינו לתת, בלי לאכול את הכסף של החודשים בבית?</li>
+     <li>יש לי בונוסים בשכר, הם בכלל נכנסים לחישוב דמי הלידה?</li>
+    </ul>
+    <div class="j-goal"><span class="g-label">המטרה היא ש:</span>
+     <p>הכסף ילך בדיוק למה שחשוב לכם, וכל שקל שמגיע לכם יחזור לחשבון במקום להישאר על הרצפה.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="j-step">
+   <div class="j-node">5</div>
+   <div class="j-card">
+    <span class="j-emoji">🌱</span><span class="j-tag">התינוק/ת כאן</span>
+    <div class="j-h3">התינוק/ת כאן. איך בונים לו/ה עתיד כלכלי טוב?</div>
+    <div class="j-text">בשבועות הראשונים אתם לא ישנים, וזו בדיוק התקופה שבה נסגרים כמה חלונות שלא נפתחים שוב. לכן את הרשימה הזו כותבים עכשיו, ולא בשלוש לפנות בוקר.</div>
+    <ul class="j-points">
+     <li>מה הדברים שחייבים לעשות בימים הראשונים, כדי לוודא שהוא/היא מוגן/ת ולא ייפגע/תיפגע?</li>
+     <li>יש ביטוח שמגיע לו/ה בחינם, צירפנו אותו? ומה צריך לעשות בחודשים הראשונים כדי שנוכל לבטח אותו/ה בכלל?</li>
+     <li><strong>מה עושים עם החיסכון לכל ילד?</strong> זו בחירה פשוטה שיכולה להביא לו/ה עוד כמה עשרות אלפי שקלים</li>
+     <li>ואיך מייצרים לו/ה חיסכון נוסף מעבר לזה, מסכום קטן וקבוע כל חודש?</li>
+     <li>איזה כסף המדינה חייבת לנו אחרי הלידה, שרק צריך לבקש?</li>
+     <li><strong>ומגיע לכם כסף בחזרה גם ממס הכנסה, ורוב ההורים לא יודעים.</strong> נקודות הזיכוי שמגיעות בלידה מגדילות לכם את המשכורת נטו כל חודש, ואחרי חופשת לידה מגיע לך החזר מס, כי הרווחת פחות באותה שנה</li>
+     <li>ואיך התקציב המשפחתי החדש נראה, כדי שהכסף לא ייעלם ולא ניכנס למינוס בגלל הרחבת המשפחה?</li>
+    </ul>
+
+    <div class="valuebox">
+     <p>וכשהתינוק/ת נולד/ת, עם השקעה חכמה ומינימלית</p>
+     <div class="vb-num"><span class="cu" data-to="100000">0</span> - <span class="cu" data-to="200000">0</span><span class="cur">₪</span></div>
+     <p>שישתחררו איתו/ה מהצבא. במקום להשקיע רק בעגלה, אתם משקיעים בתשתית שמלווה אותם לכל החיים.</p>
+    </div>
+    <div class="j-goal"><span class="g-label">המטרה היא ש:</span>
+     <p>בזמן שאתם עסוקים בלהיות הורים, הדברים שקובעים את העתיד שלו/ה כבר סודרו, ואתם לא תגלו בעוד עשר שנים שפספסתם.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== OUTCOMES + טבלת סיכום ===== -->
+<section class="light-section alt" id="outcomes">
+ <div class="light-wrap">
+  <div class="light-eyebrow">// אחרי הקורס</div>
+  <h2 class="light-h2">מה יקרה לכם <span class="orange">אחרי הקורס?</span></h2>
+  <p class="light-intro">תחושת החרדה הכלכלית המעורפלת מתחלפת בביטחון שקט. ככה זה מרגיש בצד השני:</p>
+
+  <div class="does-grid">
+   <div class="does-card fadeup-ready" style="--delay:0s">
+    <div class="does-emoji">🏡</div>
+    <div class="does-h3">יש לכם תוכנית איך להישאר בבית יותר משלושה חודשים</div>
+    <div class="does-text">לא תקווה ולא "נראה איך נסתדר". יש סכום, יש קרן, ואתם יודעים בדיוק כמה חודשים היא נשארת אתכם.</div>
+   </div>
+   <div class="does-card fadeup-ready" style="--delay:.08s">
+    <div class="does-emoji">💸</div>
+    <div class="does-h3">אתם יודעים איך לנצל כל ביטוח, זכות ושקל שמגיעים לכם</div>
+    <div class="does-text">יודעים מה מגיע, ממי לבקש ומתי, וכל שקל שחוזר נכנס לחשבון שלכם במקום להישאר על הרצפה.</div>
+   </div>
+   <div class="does-card fadeup-ready" style="--delay:.16s">
+    <div class="does-emoji">🛒</div>
+    <div class="does-h3">אתם יודעים מה לקנות, בלי לבזבז כספים מיותרים</div>
+    <div class="does-text">מה באמת צריך, מה אפשר לבקש כמתנה, ועל מה חבל. קונים מתוך רשימה ותקציב, בלי רגשות אשם ובלי חרטות.</div>
+   </div>
+   <div class="does-card fadeup-ready" style="--delay:0s">
+    <div class="does-emoji">🌱</div>
+    <div class="does-h3">אתם יודעים איך לבנות לו/ה עתיד כלכלי ונקודת פתיחה טובה</div>
+    <div class="does-text">מהחודש הראשון, עם סכום קטן וקבוע שבקושי מרגישים, מחכה לו/ה שם כסף אמיתי כשישתחרר/תשתחרר.</div>
+   </div>
+   <div class="does-card fadeup-ready" style="--delay:.08s">
+    <div class="does-emoji">🤝</div>
+    <div class="does-h3">ויש לכם שפה משותפת סביב כסף</div>
+    <div class="does-text">אתם מדברים על כסף בלי שזה הופך לריב, מחליטים יחד, ושניכם רתומים לאותה מטרה.</div>
+   </div>
+  </div>
+
+  <div class="shifts-title">ובשורה התחתונה:</div>
+  <div class="shifts-table">
+   <div class="sh-head out">היום</div>
+   <div class="sh-head in">אחרי הקורס</div>
+   <div class="sc-out">חוזרים לעבודה בלחץ אחרי 15 שבועות כי "נגמר הכסף"</div>
+   <div class="sc-in">יודעים בדיוק איך לממן את החודשים הנוספים בבית</div>
+   <div class="sc-out">החזרים מקופת חולים ומביטוחים שנשארים על הרצפה</div>
+   <div class="sc-in">כל שקל שמגיע לכם חוזר אליכם</div>
+   <div class="sc-out">קונים ציוד יקר ומיותר, עם רגשות אשם</div>
+   <div class="sc-in">רשימה ממוקדת ותקציב ידוע מראש, בלי חרטות</div>
+   <div class="sc-out">הכסף הוא מקור למריבות ולמתחים בזוגיות</div>
+   <div class="sc-in">שפה משותפת ומטרה ששניכם רתומים אליה</div>
+   <div class="sc-out">אין מושג איך בונים עתיד כלכלי לילד/ה</div>
+   <div class="sc-in">התינוק/ת כבר בדרך לעצמאות כלכלית</div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== BONUSES ===== -->
+<section class="bonuses" id="bonuses">
+ <div class="bonuses-wrap">
+  <div class="section-label">// וזה לא הכל</div>
+  <h2>המחשבונים עושים את החשבון <span class="gold">במקומכם.</span></h2>
+  <p class="how-intro">כי ידע בלי כלים נשאר בראש. בכל שלב במסע מחכה לכם הכלי שעושה את העבודה בפועל: ממלאים את המספרים שלכם, ומקבלים תשובה. בלי אקסלים, בלי לנחש.</p>
+
+  <div class="bonus-grid">
+   <div class="bonus-card fadeup-ready" style="--delay:0s">
+    <span class="stage-emoji">👶</span><div class="b-tag">מחשבון</div>
+    <div class="b-h3">דמי לידה ומענק</div>
+    <div class="b-text">כמה כסף ייכנס לכם בפועל בחודשים שאת בבית. ממלאים את הנתונים שלכם ומקבלים את המספר האמיתי, במקום לשאול חברות ולקבל תשובות סותרות.</div>
+   </div>
+   <div class="bonus-card fadeup-ready" style="--delay:.06s">
+    <span class="stage-emoji">🍼</span><div class="b-tag">מחשבון</div>
+    <div class="b-h3">תכנון כלכלי לחופשת הלידה</div>
+    <div class="b-text">זה המחשבון שעונה על השאלה הגדולה: כמה חודשים תוכלי להישאר בבית, וכמה צריך להתחיל להפריש כל חודש כדי להוסיף עוד אחד. פה מתחיל החיסכון.</div>
+   </div>
+   <div class="bonus-card fadeup-ready" style="--delay:.12s">
+    <span class="stage-emoji">📊</span><div class="b-tag">מחשבון</div>
+    <div class="b-h3">כמה עולה חודש עם תינוק</div>
+    <div class="b-text">כמה באמת יוצא כל חודש כשהוא/היא כבר כאן. בלי הפתעות בחודש השלישי, וכך תדעו על מה בכלל אתם צריכים לחסוך.</div>
+   </div>
+   <div class="bonus-card fadeup-ready" style="--delay:0s">
+    <span class="stage-emoji">🧾</span><div class="b-tag">מחשבון</div>
+    <div class="b-h3">מעקב החזרי כספים</div>
+    <div class="b-text">כל בדיקה שיצאה מהכיס, וכמה מזה חזר. כסף שחוזר בהיריון הוא כסף שנשאר בקרן, ומאריך לכם את הזמן בבית.</div>
+   </div>
+   <div class="bonus-card fadeup-ready" style="--delay:.06s">
+    <span class="stage-emoji">🛒</span><div class="b-tag">מחשבון</div>
+    <div class="b-h3">רשימת קניות ללידה</div>
+    <div class="b-text">מה באמת צריך, מה אפשר לבקש כמתנה, ואיפה שווה דווקא כן להוציא. ככה קונים לו/ה את הדברים שרציתם, בלי לאכול את הכסף של החודשים בבית.</div>
+   </div>
+   <div class="bonus-card fadeup-ready" style="--delay:.12s">
+    <span class="stage-emoji">📖</span><div class="b-tag">ובנוסף</div>
+    <div class="b-h3">חוברת עבודה לכל מודול</div>
+    <div class="b-text">חוברת שמלווה אתכם מודול-מודול, עם המקום למלא את המספרים שלכם ולהחליט. לא צופים ושוכחים, אלא יוצאים עם משהו כתוב.</div>
+   </div>
+  </div>
+
+  <div class="checklist-feature fadeup-ready">
+   <span class="cf-emoji">📝</span>
+   <div class="cf-tag">ואחד הדברים שהכי אוהבים בקורס</div>
+   <div class="cf-h3">הצ'ק-ליסט הכלכלי שלכם</div>
+   <p class="cf-text">רשימה אחת מסודרת של בדיוק מה שצריך לעשות, לפי הסדר, מהשלב שאתם בו והלאה. מסמנים כל דבר שסיימתם ורואים את ההתקדמות, וכשמגיעים לסוף אתם יודעים ש<strong>שום כסף ושום זכות לא נפלו בין הכיסאות</strong>.</p>
+  </div>
+ </div>
+</section>
+
+<!-- ===== WHAT'S INCLUDED + FIT ===== -->
+<section class="light-section alt" id="fit">
+ <div class="light-wrap narrow">
+  <div class="light-eyebrow">// מה כולל הקורס</div>
+  <h2 class="light-h2">כל הידע והכלים, <span class="orange">במקום אחד.</span></h2>
+
+  <div class="mini-stats">
+   <div class="ms-item"><div class="ms-num" data-target="8"><span class="ms-countup">8</span></div><div class="ms-label">מודולי וידאו</div></div>
+   <div class="ms-item"><div class="ms-num" data-target="5"><span class="ms-countup">5</span></div><div class="ms-label">מחשבונים אינטראקטיביים</div></div>
+   <div class="ms-item"><div class="ms-num" data-target="1"><span class="ms-countup">1</span></div><div class="ms-label">חוברת עבודה למילוי</div></div>
+  </div>
+
+  <div class="mockup-wrap fadeup-ready mockup-card">
+   <img src="images/course-mockup.jpg" alt="הקורס על המסכים: מודול הווידאו במחשב, חוברת העבודה בטאבלט, והצ'ק-ליסט והמחשבונים בנייד" loading="lazy">
+  </div>
+
+  <ul class="inc-list">
+   <li><span class="inc-check">✓</span>8 מודולי וידאו, מחולקים לשיעורים קצרים וממוקדים</li>
+   <li><span class="inc-check">✓</span>5 מחשבונים אינטראקטיביים שעושים את החשבון עליכם</li>
+   <li><span class="inc-check">✓</span>חוברת עבודה שמלווה כל מודול</li>
+   <li><span class="inc-check">✓</span>צ'ק-ליסט מיצוי זכויות מלא, לכל שלב בנפרד</li>
+   <li><span class="inc-check">✓</span>מודול שלם על שפה זוגית סביב כסף</li>
+   <li><span class="inc-check">✓</span>צפייה מהמחשב או מהטלפון, בקצב שלכם</li>
+   <li><span class="inc-check">✓</span>גישה מיידית לאחר הרכישה, בלי צורך בידע קודם</li>
+  </ul>
+
+  <div class="fit-grid">
+   <div class="fit-col yes">
+    <div class="fit-h3 yes">הקורס בשבילכם אם</div>
+    <ul class="fit-list yes">
+     <li><span class="fit-icon yes">✓</span>אתם חושבים על תינוק, או שכבר בתחילת הדרך.</li>
+     <li><span class="fit-icon yes">✓</span>אתם רוצים חופשת לידה ארוכה מ-15 שבועות, ולא יודעים איך לממן אותה.</li>
+     <li><span class="fit-icon yes">✓</span>אתם לא רוצים לפספס זכויות והחזרים שמגיעים לכם.</li>
+     <li><span class="fit-icon yes">✓</span>אתם רוצים לדבר על כסף כזוג בלי שזה יהפוך לריב.</li>
+     <li><span class="fit-icon yes">✓</span>אתם רוצים להתחיל לבנות לתינוק/ת עתיד כלכלי מהיום הראשון.</li>
+    </ul>
+   </div>
+   <div class="fit-col no">
+    <div class="fit-h3 no">פחות מתאים אם</div>
+    <ul class="fit-list no">
+     <li><span class="fit-icon no">×</span>אתם מחפשים מישהי שתבנה לכם תוכנית כלכלית אישית מלאה.</li>
+     <li><span class="fit-icon no">×</span>אתם רוצים ליווי צמוד ומענה לשאלות על המצב האישי שלכם.</li>
+     <li><span class="fit-icon no">×</span>הילד/ה כבר בן/בת כמה שנים, ורוב החלונות שמדובר בהם נסגרו.</li>
+     <li><span class="fit-icon no">×</span>אתם מחפשים קורס השקעות מתקדם לשוק ההון.</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== OBJECTION ===== -->
+<section class="objection">
+ <h2>"אבל אנחנו בקושי סוגרים את החודש. איך בדיוק נחסוך?"</h2>
+ <p class="obj-line"><strong>זו בדיוק הסיבה.</strong></p>
+ <p class="obj-big">למי שיש הרבה כסף <span class="neg">לא צריך תוכנית</span>.<br>הוא פשוט משלם ולא סופר.</p>
+ <p class="obj-line">אבל כשכל שקל נחשב, מה שקובע אם תישארי בבית עוד חודשיים<br>זה לא כמה אתם מרוויחים. זה <strong>מתי התחלתם</strong>, וכמה הפרשתם כל חודש.</p>
+ <p class="obj-big">ורוב מה שתעשו כאן זה בכלל <span class="pos">לבקש כסף שכבר מגיע לכם</span>.<br>מהקופה, מהביטוח, מהעבודה וממס הכנסה.</p>
+ <p class="obj-line">אף אחד לא מבקש מכם להרוויח יותר או לחסוך סכומים גדולים.<br>רק לדעת כמה צריך, ולפרוס את זה על החודשים שנשארו.</p>
+</section>
+
+<!-- ===== OFFER + FORM ===== -->
+<section class="offer" id="join">
+ <div class="offer-inner">
+  <div class="section-label">// אז כמה עולה להצטרף?</div>
+  <h2>מוכנים להיכנס להורות <span class="gold">מתוך שקט?</span></h2>
+  <p class="offer-lead">כמה שווה לכם עוד חודש אחד של שקט בבית עם התינוק/ת שלכם? חודש שבו את לא צריכה להסתכל על השעון בחרדה, אלא פשוט להיות שם בשבילו/ה. אני לא אשתמש בטיימרים מזויפים או ב"רק היום", זה פשוט לא הסגנון שלי. <strong>ולכן בחרתי מחיר נגיש לכל כיס.</strong></p>
+
+  <div class="offer-card">
+   <div class="price-row"><span class="price-num">147 ₪</span></div>
+   <div class="price-note">תשלום חד פעמי · גישה מיידית · לכל החיים</div>
+
+   <!-- הטופס לוכד את הפרטים ואז מעביר ל-Grow. אל תשנו את ה-id-ים - ה-JS למטה נסמך עליהם. -->
+   <form class="lead-form" id="join-form" onsubmit="return false;">
+    <input type="text" id="lf_name" placeholder="שם" maxlength="80" autocomplete="name" required>
+    <input type="email" id="lf_email" placeholder="מייל" maxlength="255" autocomplete="email" required>
+    <input type="tel" id="lf_phone" placeholder="טלפון נייד" maxlength="40" autocomplete="tel" inputmode="tel" required>
+    <div class="ferr" id="lf_eemail">כתובת המייל לא נראית תקינה, שווה לבדוק אותה שוב</div>
+    <div class="ferr" id="lf_ephone">המספר לא נראה כמו נייד ישראלי, צריך מספר שמתחיל ב-05</div>
+    <label class="consent"><input type="checkbox" id="lf_consent"><span>אני מאשר/ת קבלת דיוור מטלי בנימינוב שרעבי.</span></label>
+    <label class="consent"><input type="checkbox" id="lf_terms"><span>קראתי ואני מסכים/ה ל<a href="terms/" target="_blank" rel="noopener">תקנון</a> ול<a href="privacy/" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</span></label>
+    <button type="button" class="form-submit" id="lf_submit" onclick="submitLead()" disabled>אני רוצה את הקורס · 147 ₪</button>
+    <div class="form-hint" id="lf_hint">ממלאים את הפרטים ומסמנים את שני האישורים, והכפתור נדלק</div>
+   </form>
+  </div>
+
+  <p class="offer-reassure">פחות מארוחה זוגית במסעדה, ופחות ממה שתשלמו על חבילת חיתולים וקצת מגבונים.</p>
+ </div>
+</section>
+
+<!-- ===== ABOUT / BIO ===== -->
+<section class="light-section alt" id="about">
+ <div class="light-wrap">
+  <div class="light-eyebrow">// למה להקשיב דווקא לי</div>
+  <h2 class="light-h2">אם עוד לא הכרנו, <span class="orange">היי, אני טלי.</span></h2>
+  <div class="about-grid">
+   <div class="about-photo-card fadeup-ready"><img src="images/tali-portrait.jpg" alt="טלי בנימינוב שרעבי - RichLife" loading="lazy"></div>
+   <div class="about-text">
+    <p>ב-3 השנים האחרונות אני מלווה זוגות ויחידים לשליטה טובה יותר בכסף, חיסכון, השקעות וצמיחה כלכלית. למדתי ייעוץ כלכלי, ייעוץ משכנתאות וגם NLP Master, כי מבחינתי כסף הוא אף פעם לא רק מספרים באקסל. הוא גם פחדים, הרגלים ואמונות מהבית.</p>
+    <p>לימדתי חינוך פיננסי בבתי ספר מכיתה ד' ועד י"א, הרציתי מול צעירים בסיכון, וליוויתי רווקים, זוגות ומשפחות מגיל 19 ועד 54. שם למדתי לקחת מושגים שנשמעים מסובכים, ולהסביר אותם בשפה פשוטה שכל אחד ואחת מבינים, גם בלי שום רקע.</p>
+    <p>גם הסיפור האישי שלי עם כסף התחיל ממקום לא פשוט. יחד עם דרור, בעלי, בנינו לעצמנו דרך כלכלית אחרת: חסכנו, למדנו, השקענו וקיבלנו החלטות אמיצות. <strong>היום, בגיל 27, יש לנו נכסים והשקעות בשווי מעל 1.7 מיליון ש"ח, 5 השקעות נדל"ן (3 בארץ ו-2 בחו"ל) ותיק בשוק ההון. בלי ירושה, בלי לזכות בלוטו.</strong></p>
+    <p>את הקורס הזה יצרתי כי אני רואה יותר מדי זוגות מגלים את המספרים תוך כדי, בדיוק ברגע שהם הכי צריכים שקט. מגיע לכם להיכנס להורות עם תוכנית, ולתת לתינוק/ת שלכם נקודת פתיחה אמיתית.</p>
+    <div class="about-sign">טלי, RichLife</div>
+   </div>
+  </div>
+
+  <div class="about-collages">
+   <div class="collage-card fadeup-ready" style="--delay:0s">
+    <img src="images/contracts-collage.jpg" alt="חתימות אמיתיות על הסכמי השקעות נדל&quot;ן" loading="lazy">
+    <div class="collage-caption">הרגעים האמיתיים: חתימות על עסקאות הנדל"ן שלנו</div>
+   </div>
+   <div class="collage-card fadeup-ready" style="--delay:.1s">
+    <img src="images/travels-collage.jpg" alt="טלי ודרור מטיילים בעולם" loading="lazy">
+    <div class="collage-caption">והחיים שהתנהלות נכונה מאפשרת</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="light-section white" id="faq">
+ <div class="light-wrap narrow">
+  <div class="light-eyebrow">// אולי שאלתם את עצמכם</div>
+  <h2 class="light-h2">מה שכולם <span class="orange">שואלים.</span></h2>
+  <div class="faq-wrap">
+   <details class="faq-item">
+    <summary>אנחנו עוד לא בהיריון, זה מוקדם מדי? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">ההפך. חלק מהדברים הכי חשובים, כמו ביטוחים ורציפות תעסוקתית, אפשר לעשות רק לפני. מי שמתחיל מוקדם מגיע מוכן ורגוע, וחוסך אלפי שקלים.</div>
+   </details>
+   <details class="faq-item">
+    <summary>אני כבר בהיריון, פספסתי את הרכבת? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">ממש לא. שלושת השלבים האחרונים במסע נכתבו בדיוק בשבילכם: תוכנית וקרן לחופשת הלידה, מיצוי כל ההחזרים והזכויות בזמן ההיריון, ובניית העתיד הכלכלי של התינוק/ת מהחודש הראשון.</div>
+   </details>
+   <details class="faq-item">
+    <summary>אני לא מבינה בכסף, זה מתאים לי? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">בדיוק בשבילך. הקורס בנוי בשפה פשוטה, שלב אחר שלב, בלי מונחים מסובכים, עם מחשבונים שעושים את החשבון במקומך.</div>
+   </details>
+   <details class="faq-item">
+    <summary>אפשר לעבור את זה לבד, בלי בן/בת הזוג? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">אפשר בהחלט, והרבה פעמים אחד מבני הזוג הוא זה שמתחיל. יחד עם זאת, המודול על שפה זוגית נבנה בדיוק כדי לעזור לכם להביא את השני/ה לתוך זה בלי שזה יהפוך לוויכוח.</div>
+   </details>
+   <details class="faq-item">
+    <summary>אני עצמאית, זה מתאים גם לי? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">כן. הקורס בנוי גם לשכירות וגם לעצמאיות, ויש בו מסלול נפרד לעצמאית: איך דמי הלידה שלך נקבעים, מה עושים עם העסק בזמן החופשה, ואיך לא לפגוע בזכאות בדרך.</div>
+   </details>
+   <details class="faq-item">
+    <summary>מה ההבדל בין הקורס לליווי האישי? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">הקורס נותן לכם את כל הדרך לעשות זאת בעצמכם, בקצב שלכם. בליווי האישי אני איתכם, מתאימה הכל אישית וצועדת יחד אתכם.</div>
+   </details>
+   <details class="faq-item">
+    <summary>איך מקבלים את הקורס? <span class="faq-q-icon">+</span></summary>
+    <div class="faq-a">מיד אחרי התשלום נפתחת לכם גישה מלאה לכל המודולים, המחשבונים והצ'ק-ליסטים. תשלום חד-פעמי, גישה לכל החיים.</div>
+   </details>
+  </div>
+ </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+ <span class="footer-mark">RichLife</span>
+ <div class="footer-meta">טלי בנימינוב שרעבי · ליווי פיננסי, חיסכון והשקעות<br>RichLife · כל הזכויות שמורות</div>
+</footer>
+
+<!-- ===== STICKY MOBILE CTA (בלי מחיר) ===== -->
+<div class="sticky-cta">
+ <a href="#join">אני רוצה את הקורס</a>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+   JS - מודולים אינטראקטיביים
+═════════════════════════════════════════════════════════════════ -->
+<script>
+/* ===== 1. SCROLL PROGRESS BAR ===== */
+(function() {
+ const bar = document.getElementById('scroll-progress');
+ function updateBar() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const pct = docH > 0 ? (scrollTop / docH) * 100 : 0;
+  bar.style.width = pct + '%';
+ }
+ window.addEventListener('scroll', updateBar, { passive: true });
+ updateBar();
+})();
+
+/* ===== 2. (מכונת הכתיבה הוסרה - תת-הכותרת ארוכה, והנפשת הקלדה עליה רק מעכבת קריאה) ===== */
+
+/* ===== 3. SCROLL WORD HIGHLIGHT in .story paragraphs ===== */
+(function() {
+ const storySection = document.getElementById('story-section');
+ if (!storySection) return;
+ const paragraphs = storySection.querySelectorAll('p');
+ paragraphs.forEach(p => {
+  function wrapTextNode(textNode) {
+   const words = textNode.textContent.split(/(\s+)/);
+   const frag = document.createDocumentFragment();
+   words.forEach(part => {
+    if (/^\s+$/.test(part) || part === '') {
+     frag.appendChild(document.createTextNode(part));
+    } else {
+     const span = document.createElement('span');
+     span.className = 'hl-word';
+     span.textContent = part;
+     frag.appendChild(span);
+    }
+   });
+   textNode.parentNode.replaceChild(frag, textNode);
+  }
+  function wrapNode(node) {
+   if (node.nodeType === Node.TEXT_NODE) {
+    if (node.textContent.trim()) wrapTextNode(node);
+   } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'STRONG' && node.tagName !== 'EM' && !node.classList.contains('neg')) {
+    Array.from(node.childNodes).forEach(child => wrapNode(child));
+   }
+  }
+  wrapNode(p);
+ });
+
+ const allWords = Array.from(storySection.querySelectorAll('.hl-word'));
+ function updateHighlight() {
+  const vh = window.innerHeight;
+  allWords.forEach(span => {
+   const rect = span.getBoundingClientRect();
+   const center = rect.top + rect.height / 2;
+   if (center < vh * 0.82) span.classList.add('lit');
+   else span.classList.remove('lit');
+  });
+ }
+ window.addEventListener('scroll', updateHighlight, { passive: true });
+ updateHighlight();
+})();
+
+/* ===== 4. JOURNEY - קו התקדמות + הדלקת שלבים בגלילה ===== */
+(function initJourney() {
+ const track = document.getElementById('journey-track');
+ const fill = document.getElementById('journey-fill');
+ if (!track || !fill) return;
+ const steps = Array.from(document.querySelectorAll('.j-step'));
+ function upd() {
+  const r = track.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const passed = Math.min(Math.max(vh * 0.72 - r.top, 0), r.height);
+  fill.style.height = passed + 'px';
+  steps.forEach(function(s) {
+   const sr = s.getBoundingClientRect();
+   if (sr.top + 60 < vh * 0.72) s.classList.add('lit');
+   else s.classList.remove('lit');
+  });
+ }
+ window.addEventListener('scroll', upd, { passive: true });
+ window.addEventListener('resize', upd);
+ upd();
+})();
+
+/* ===== 4.5 COUNT-UP על פס המספרים (מה כולל הקורס) ===== */
+(function initCountUp() {
+ const wrap = document.querySelector('.mini-stats');
+ if (!wrap || !('IntersectionObserver' in window)) return;
+ let triggered = false;
+ function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+ function animateCount(el, target, duration) {
+  let start = null;
+  function step(ts) {
+   if (!start) start = ts;
+   const p = Math.min((ts - start) / duration, 1);
+   el.textContent = Math.round(easeOutCubic(p) * target);
+   if (p < 1) requestAnimationFrame(step); else el.textContent = target;
+  }
+  requestAnimationFrame(step);
+ }
+ const obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+   if (entry.isIntersecting && !triggered) {
+    triggered = true; obs.disconnect();
+    wrap.querySelectorAll('.ms-num').forEach(function(numEl) {
+     const target = parseInt(numEl.getAttribute('data-target'), 10);
+     const countEl = numEl.querySelector('.ms-countup');
+     if (countEl && !isNaN(target)) animateCount(countEl, target, 1300);
+    });
+   }
+  });
+ }, { threshold: 0.3 });
+ obs.observe(wrap);
+})();
+
+/* ===== 4.6 COUNT-UP לקופסת המספר הגדול (100-200 אלף) ===== */
+(function initValueCount() {
+ const box = document.querySelector('.valuebox');
+ if (!box || !('IntersectionObserver' in window)) return;
+ let done = false;
+ const fmt = n => n.toLocaleString('en-US');
+ const ease = t => 1 - Math.pow(1 - t, 3);
+ const obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+   if (!e.isIntersecting || done) return;
+   done = true; obs.disconnect();
+   box.querySelectorAll('.cu[data-to]').forEach(function(el) {
+    const to = parseInt(el.getAttribute('data-to'), 10) || 0;
+    let start = null;
+    function step(ts) {
+     if (!start) start = ts;
+     const pr = Math.min((ts - start) / 1600, 1);
+     el.textContent = fmt(Math.round(ease(pr) * to));
+     if (pr < 1) requestAnimationFrame(step); else el.textContent = fmt(to);
+    }
+    requestAnimationFrame(step);
+   });
+  });
+ }, { threshold: 0.4 });
+ obs.observe(box);
+})();
+
+/* ===== 5. FADEUP STAGGER ===== */
+(function initFadeUp() {
+ if (!('IntersectionObserver' in window)) {
+  document.querySelectorAll('.fadeup-ready').forEach(function(el) {
+   el.style.opacity = '1'; el.style.transform = 'none';
+  });
+  return;
+ }
+ const obs = new IntersectionObserver(function(entries, o) {
+  entries.forEach(function(entry) {
+   if (entry.isIntersecting) {
+    const el = entry.target;
+    el.style.animationDelay = el.style.getPropertyValue('--delay') || '0s';
+    el.classList.add('fadeup-done');
+    o.unobserve(el);
+   }
+  });
+ }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+ document.querySelectorAll('.fadeup-ready').forEach(function(el) { obs.observe(el); });
+})();
+
+/* ===== 6. CURSOR GLOW (סקשנים כהים בלבד) ===== */
+(function initCursorGlow() {
+ const glow = document.getElementById('cursor-glow');
+ if (!glow) return;
+ const darkSelectors = ['.bonuses', '.offer', '.site-footer'];
+ const darkEls = darkSelectors.map(s => document.querySelector(s)).filter(Boolean);
+ let gx = 0, gy = 0, tx = 0, ty = 0, active = false, rafId = null;
+ function isOverDark(x, y) {
+  return darkEls.some(function(el) {
+   const r = el.getBoundingClientRect();
+   return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+  });
+ }
+ function lerp() {
+  gx += (tx - gx) * 0.12; gy += (ty - gy) * 0.12;
+  glow.style.left = gx + 'px'; glow.style.top = gy + 'px';
+  rafId = requestAnimationFrame(lerp);
+ }
+ document.addEventListener('mousemove', function(e) {
+  tx = e.clientX; ty = e.clientY;
+  const over = isOverDark(e.clientX, e.clientY);
+  if (over && !active) {
+   active = true;
+   glow.classList.add('visible');
+   gx = tx; gy = ty;
+   glow.style.left = gx + 'px'; glow.style.top = gy + 'px';
+   if (!rafId) rafId = requestAnimationFrame(lerp);
+  } else if (!over && active) {
+   active = false;
+   glow.classList.remove('visible');
+   if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+ });
+})();
+
+/* ===== 7. 3D TILT ===== */
+(function initTilt() {
+ if (window.matchMedia('(hover: none)').matches) return;
+ const MAX_TILT = 5, PERSP = 900;
+ document.querySelectorAll('.j-card, .bonus-card, .does-card').forEach(function(card) {
+  card.addEventListener('mousemove', function(e) {
+   const r = card.getBoundingClientRect();
+   const nx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+   const ny = ((e.clientY - r.top) / r.height - 0.5) * 2;
+   card.style.transform = 'perspective(' + PERSP + 'px) rotateX(' + (-ny * MAX_TILT) + 'deg) rotateY(' + (nx * MAX_TILT) + 'deg) translateY(-4px)';
+  });
+  card.addEventListener('mouseleave', function() {
+   card.style.transform = '';
+  });
+ });
+})();
+
+/* ===== 8. FORM - ולידציה, לכידת הרוכש/ת, ואז מעבר לעמוד התשלום ב-Grow ===== */
+const GROW_URL = "https://pay.grow.link/MzE4MTg~be82dca2d3f41654eb200356ca4409f6-MzU1NDA3NQ";
+
+/* לכידת הרוכש/ת לפני המעבר לתשלום - מי שנוטש/ת בעמוד התשלום עדיין נשמר/ת אצלנו.
+   ריק = דילוג שקט (הטופס לעולם לא נשבר). ממלאים ביום העלייה לאוויר. */
+const BUYERS_WORKER_URL = "";
+
+function lfValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+function lfValidPhone(v) { return /^0\d{8,9}$/.test(v.replace(/[-\s]/g, '')); }
+
+function lfCheck() {
+ const nm = document.getElementById('lf_name').value.trim();
+ const ph = document.getElementById('lf_phone').value.trim();
+ const em = document.getElementById('lf_email').value.trim();
+ const okP = lfValidPhone(ph), okE = lfValidEmail(em);
+ document.getElementById('lf_ephone').classList.toggle('show', ph.length > 0 && !okP);
+ document.getElementById('lf_eemail').classList.toggle('show', em.length > 0 && !okE);
+ const ready = nm.length > 1 && okP && okE &&
+   document.getElementById('lf_consent').checked &&
+   document.getElementById('lf_terms').checked;
+ document.getElementById('lf_submit').disabled = !ready;
+ const hint = document.getElementById('lf_hint');
+ if (hint) hint.style.visibility = ready ? 'hidden' : 'visible';
+}
+['lf_name','lf_phone','lf_email'].forEach(function(id){ const e=document.getElementById(id); if(e) e.addEventListener('input', lfCheck); });
+['lf_consent','lf_terms'].forEach(function(id){ const e=document.getElementById(id); if(e) e.addEventListener('change', lfCheck); });
+
+function captureBuyer(lead) {
+ if (!BUYERS_WORKER_URL) return;
+ const qp = new URLSearchParams(location.search);
+ if (qp.has('demo') || qp.has('form')) return;   /* מצב בדיקה - לא מזהם את הגיליון */
+ try {
+  fetch(BUYERS_WORKER_URL, {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json' },
+   body: JSON.stringify({
+    name: lead.name || '', phone: lead.phone || '', email: lead.email || '',
+    consent: document.getElementById('lf_consent').checked ? 'כן' : 'לא',
+    source: 'mochanim-kalkalit-lelida'
+   }),
+   keepalive: true                                /* שורד את הניווט ל-Grow */
+  }).catch(function(){});
+ } catch (e) {}
+}
+
+function submitLead() {
+ const lead = {
+  name: document.getElementById('lf_name').value.trim(),
+  phone: document.getElementById('lf_phone').value.trim(),
+  email: document.getElementById('lf_email').value.trim()
+ };
+ captureBuyer(lead);
+ try { if (window.fbq) fbq('track','InitiateCheckout',{value:147,currency:'ILS',content_name:'mochanim-kalkalit-lelida'}); } catch (e) {}
+ const btn = document.getElementById('lf_submit');
+ if (btn) { btn.disabled = true; btn.textContent = 'רק רגע, מעבירים אתכם לתשלום...'; }
+ location.href = GROW_URL;
+}
+</script>
+
+<!-- ═══ רכיב נגישות RichLife - מוטמע בשני הדפים (מכר + תודה). עצמאי, בלי תלות חיצונית. ═══ -->
+<style>
+/* כפתור + תפריט נגישות */
+#a11y-btn { position: fixed; bottom: 20px; left: 16px; z-index: 998; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fff; background: #3e5448; color: #fff; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,.3); display: flex; align-items: center; justify-content: center; }
+#a11y-btn:focus-visible { outline: 3px solid #c1553f; outline-offset: 2px; }
+#a11y-menu { position: fixed; bottom: 78px; left: 16px; z-index: 998; width: 250px; background: #fff; border: 1px solid #d3e0df; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.25); padding: 14px; display: none; font-family: 'Heebo', Arial, sans-serif; }
+#a11y-menu.open { display: block; }
+#a11y-menu h3 { font-size: 15px; font-weight: 800; color: #1e2b25; margin: 0 0 10px; text-align: right; }
+#a11y-menu button.a11y-opt { display: block; width: 100%; text-align: right; background: #eef4ef; border: 1px solid #d3e0df; border-radius: 10px; padding: 9px 12px; margin-bottom: 6px; font-family: inherit; font-size: 13.5px; font-weight: 600; color: #1e2b25; cursor: pointer; }
+#a11y-menu button.a11y-opt[aria-pressed="true"] { background: #3e5448; color: #fff; border-color: #3e5448; }
+#a11y-menu button.a11y-opt:focus-visible { outline: 3px solid #c1553f; }
+#a11y-menu .a11y-link { display: block; text-align: center; font-size: 12.5px; color: #3e5448; margin-top: 8px; }
+@media (max-width: 880px) { #a11y-btn { bottom: 96px; } #a11y-menu { bottom: 152px; } }
+/* מצבי נגישות */
+html.a11y-bigtext body { zoom: 1.18; }
+html.a11y-bigtext2 body { zoom: 1.35; }
+html.a11y-contrast, html.a11y-contrast img { filter: invert(1) hue-rotate(180deg); }
+html.a11y-contrast img, html.a11y-contrast video { filter: invert(1) hue-rotate(180deg); }
+html.a11y-gray { filter: grayscale(1); }
+html.a11y-links a { text-decoration: underline !important; box-shadow: 0 0 0 2px #c1553f !important; }
+html.a11y-font body, html.a11y-font body * { font-family: Arial, Helvetica, sans-serif !important; }
+html.a11y-noanim *, html.a11y-noanim *::before, html.a11y-noanim *::after { animation: none !important; transition: none !important; }
+html.a11y-cursor, html.a11y-cursor * { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="black" stroke="white" stroke-width="1.2" d="M5 2l14 12h-8l-2 8z"/></svg>') 4 2, auto !important; }
+/* כיבוד העדפת מערכת להפחתת תנועה */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+<button id="a11y-btn" aria-label="תפריט נגישות" aria-expanded="false" title="נגישות">&#9855;</button>
+<div id="a11y-menu" role="dialog" aria-label="אפשרויות נגישות">
+ <h3>נגישות</h3>
+ <button class="a11y-opt" data-cls="a11y-bigtext" aria-pressed="false">הגדלת טקסט</button>
+ <button class="a11y-opt" data-cls="a11y-bigtext2" aria-pressed="false">הגדלת טקסט נוספת</button>
+ <button class="a11y-opt" data-cls="a11y-contrast" aria-pressed="false">ניגודיות כהה</button>
+ <button class="a11y-opt" data-cls="a11y-gray" aria-pressed="false">גווני אפור</button>
+ <button class="a11y-opt" data-cls="a11y-links" aria-pressed="false">הדגשת קישורים</button>
+ <button class="a11y-opt" data-cls="a11y-font" aria-pressed="false">פונט קריא</button>
+ <button class="a11y-opt" data-cls="a11y-noanim" aria-pressed="false">עצירת אנימציות</button>
+ <button class="a11y-opt" data-cls="a11y-cursor" aria-pressed="false">סמן גדול</button>
+ <button class="a11y-opt" id="a11y-reset">איפוס נגישות</button>
+ <a class="a11y-link" href="accessibility/">הצהרת נגישות</a>
+</div>
+<script>
+(function(){
+ var KEY = 'richlife-a11y';
+ var root = document.documentElement;
+ var btn = document.getElementById('a11y-btn');
+ var menu = document.getElementById('a11y-menu');
+ var opts = menu.querySelectorAll('.a11y-opt[data-cls]');
+ function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e){ return []; } }
+ function save(list){ try { localStorage.setItem(KEY, JSON.stringify(list)); } catch(e){} }
+ function apply(){
+  var on = load();
+  opts.forEach(function(o){
+   var c = o.getAttribute('data-cls'), active = on.indexOf(c) > -1;
+   root.classList.toggle(c, active);
+   o.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+ }
+ btn.addEventListener('click', function(){
+  var open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (open) menu.querySelector('.a11y-opt').focus();
+ });
+ document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menu.classList.contains('open')) { menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.focus(); } });
+ opts.forEach(function(o){
+  o.addEventListener('click', function(){
+   var c = o.getAttribute('data-cls'), on = load(), i = on.indexOf(c);
+   if (i > -1) on.splice(i, 1); else on.push(c);
+   if (c === 'a11y-bigtext') { var j = on.indexOf('a11y-bigtext2'); if (j > -1 && i === -1) on.splice(j, 1); }
+   if (c === 'a11y-bigtext2') { var k = on.indexOf('a11y-bigtext'); if (k > -1 && i === -1) on.splice(k, 1); }
+   save(on); apply();
+  });
+ });
+ document.getElementById('a11y-reset').addEventListener('click', function(){ save([]); apply(); });
+ apply();
+})();
+</script>
+<!-- ═══ סוף רכיב נגישות ═══ -->
+
+</body>
+</html>
