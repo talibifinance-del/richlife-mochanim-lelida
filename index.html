@@ -349,6 +349,7 @@ h1.hero-h1 { font-weight: 900; font-size: clamp(27px, 3.2vw, 43px); line-height:
 .offer-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 26px; padding: 42px 38px; backdrop-filter: blur(16px); box-shadow: 0 34px 90px rgba(0,0,0,.35); text-align: right; }
 .price-row { text-align: center; margin-bottom: 6px; }
 .price-num { font-weight: 900; font-size: clamp(56px,7.6vw,82px); line-height: 1; letter-spacing: -.04em; color: #fff; }
+.price-split { font-size: 17px; font-weight: 700; color: var(--sage); margin: 2px 0 8px; }
 .price-note { text-align: center; font-size: 14px; color: var(--on-dark-soft); letter-spacing: .04em; margin-bottom: 28px; }
 .lead-form { display: flex; flex-direction: column; gap: 13px; }
 .lead-form input[type=text], .lead-form input[type=email], .lead-form input[type=tel] { width: 100%; font-family: var(--font); font-size: 16px; padding: 16px 18px; border-radius: 12px; background: #fff; border: 1px solid rgba(255,255,255,.4); color: var(--ink); transition: box-shadow .25s; }
@@ -429,6 +430,10 @@ body { padding-bottom: 92px; }
  .sticky-cta { bottom: calc(10px + env(safe-area-inset-bottom)); }
 }
 /* ===== מקומות שמורים לתמונות אמיתיות (יוחלפו בצילומים של טלי) ===== */
+.hero-visual:has(.hero-photo) { max-width: 430px; }
+.hero-photo { aspect-ratio: 4 / 5; }
+.hero-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 44%; }
+@media (max-width: 880px) { .hero-visual:has(.hero-photo) { max-width: 330px; } }
 .mockup-card { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; overflow: visible !important; border-radius: 0 !important; min-height: 0 !important; }
 .mockup-card img { width: 100%; display: block; filter: drop-shadow(0 26px 48px rgba(30,60,45,.18)); }
 .photo-slot { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, rgba(var(--pine-rgb),.05) 0 14px, rgba(var(--pine-rgb),.09) 14px 28px); border: 2px dashed rgba(var(--pine-rgb),.42); border-radius: 22px; min-height: 260px; }
@@ -504,12 +509,8 @@ body { padding-bottom: 92px; }
    
 
    <div class="hero-visual">
-    <div class="hero-img-card photo-slot">
-     <div class="ps-inner">
-      <span class="ps-emoji">📷</span>
-      <span class="ps-title">מקום לתמונה שלכם</span>
-      <span class="ps-note">צילום היריון או צילום משפחתי ייכנס לכאן</span>
-     </div>
+    <div class="hero-img-card hero-photo">
+     <img src="images/hero-couple.jpg" alt="טלי בנימינוב שרעבי ובעלה דרור בצילומי היריון, ידיים על הבטן" loading="eager">
     </div>
     <div class="hero-badge">🎓 קורס דיגיטלי · בקצב שלכם</div>
    </div>
@@ -875,8 +876,9 @@ body { padding-bottom: 92px; }
 ולתת לכם לקבל את ההחלטות <strong>ממקום של בחירה, ולא ממקום של לחץ</strong>.</p>
 
   <div class="offer-card">
-   <div class="price-row"><span class="price-num">147 ₪</span></div>
-   <div class="price-note">תשלום חד פעמי · גישה מיידית · לכל החיים</div>
+   <div class="price-row"><span class="price-num">297 ₪</span></div>
+   <div class="price-split">או <strong>3 תשלומים של 99 ₪</strong></div>
+   <div class="price-note">גישה מיידית · לכל החיים</div>
 
    <!-- הטופס לוכד את הפרטים ואז מעביר ל-Grow. אל תשנו את ה-id-ים - ה-JS למטה נסמך עליהם. -->
    <form class="lead-form" id="join-form" onsubmit="return false;">
@@ -887,12 +889,12 @@ body { padding-bottom: 92px; }
     <div class="ferr" id="lf_ephone">המספר לא נראה כמו נייד ישראלי, צריך מספר שמתחיל ב-05</div>
     <label class="consent"><input type="checkbox" id="lf_consent"><span>אני מאשר/ת קבלת דיוור מטלי בנימינוב שרעבי.</span></label>
     <label class="consent"><input type="checkbox" id="lf_terms"><span>קראתי ואני מסכים/ה ל<a href="terms/" target="_blank" rel="noopener">תקנון</a> ול<a href="privacy/" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</span></label>
-    <button type="button" class="form-submit" id="lf_submit" onclick="submitLead()" disabled>אני רוצה את הקורס · 147 ₪</button>
+    <button type="button" class="form-submit" id="lf_submit" onclick="submitLead()" disabled>אני רוצה את הקורס · 3 תשלומים של 99 ₪</button>
     <div class="form-hint" id="lf_hint">ממלאים את הפרטים ומסמנים את שני האישורים, והכפתור נדלק</div>
    </form>
   </div>
 
-  <p class="offer-reassure">פחות מארוחה זוגית במסעדה, ופחות ממה שתשלמו על חבילת חיתולים וקצת מגבונים.</p>
+  <p class="offer-reassure">99 ש"ח בחודש, שלושה חודשים. פחות ממה שתוציאו על חיתולים ומגבונים באותו חודש.</p>
  </div>
 </section>
 
@@ -902,7 +904,7 @@ body { padding-bottom: 92px; }
   <div class="light-eyebrow">// למה להקשיב דווקא לי</div>
   <h2 class="light-h2">אם עוד לא הכרנו, <span class="orange">היי, אני טלי.</span></h2>
   <div class="about-grid">
-   <div class="about-photo-card fadeup-ready"><img src="images/tali-portrait.jpg" alt="טלי בנימינוב שרעבי - RichLife" loading="lazy"></div>
+   <div class="about-photo-card fadeup-ready"><img src="images/tali-dog.jpg" alt="טלי בנימינוב שרעבי בהיריון, עם הכלב שלה" loading="lazy"></div>
    <div class="about-text">
     <p>ב-3 השנים האחרונות אני מלווה זוגות ויחידים לשליטה טובה יותר בכסף, חיסכון, השקעות וצמיחה כלכלית. למדתי ייעוץ כלכלי, ייעוץ משכנתאות וגם NLP Master, כי מבחינתי כסף הוא אף פעם לא רק מספרים באקסל. הוא גם פחדים, הרגלים ואמונות מהבית.</p>
     <p>לימדתי חינוך פיננסי בבתי ספר מכיתה ד' ועד י"א, הרציתי מול צעירים בסיכון, וליוויתי רווקים, זוגות ומשפחות מגיל 19 ועד 54. שם למדתי לקחת מושגים שנשמעים מסובכים, ולהסביר אותם בשפה פשוטה שכל אחד ואחת מבינים, גם בלי שום רקע.</p>
@@ -1243,7 +1245,7 @@ function submitLead() {
   email: document.getElementById('lf_email').value.trim()
  };
  captureBuyer(lead);
- try { if (window.fbq) fbq('track','InitiateCheckout',{value:147,currency:'ILS',content_name:'mochanim-kalkalit-lelida'}); } catch (e) {}
+ try { if (window.fbq) fbq('track','InitiateCheckout',{value:297,currency:'ILS',content_name:'mochanim-kalkalit-lelida'}); } catch (e) {}
  const btn = document.getElementById('lf_submit');
  if (btn) { btn.disabled = true; btn.textContent = 'רק רגע, מעבירים אתכם לתשלום...'; }
  location.href = GROW_URL;
